@@ -45,5 +45,4 @@ jobs:
           git config --local user.name "GitHub Action"
           git add BACKUP/*.md
           git commit -a -m 'update new blog' || echo "nothing to commit"
-          git remote set-url origin https://x-access-token:${{ secrets.G_T }}@github.com/${{ secrets.USER }}/${{ secrets.REPO_NAME }}.git
           git push || echo "nothing to push"
