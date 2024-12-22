@@ -46,3 +46,10 @@ jobs:
           git add BACKUP/*.md
           git commit -a -m 'update new blog' || echo "nothing to commit"
           git push || echo "nothing to push"
+
+      - name: Debug GitHub Actions
+        run: |
+          echo "Debugging GitHub Actions"
+        env:
+          ACTIONS_STEP_DEBUG: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
