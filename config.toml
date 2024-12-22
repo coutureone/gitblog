@@ -1,4 +1,4 @@
-base_url = "https://github.com/coutureone/gitblog/"
+base_url = "https://coutureone/gitblog/"
 generate_feeds = true
 feed_filenames = ["rss.xml"]
 theme = "even"
