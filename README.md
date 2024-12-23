@@ -4,5 +4,6 @@ My personal blog([About Me](https://github.com/coutureone/gitblog/issues/282)) u
 [RSS Feed](https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml)
 
 ## 最近更新
-- [授权](https://github.com/coutureone/gitblog/issues/21)--2024-12-22
-- [权限测试](https://github.com/coutureone/gitblog/issues/20)--2024-12-22
+- [About Me](https://github.com/coutureone/gitblog/issues/22)--2024-12-23
+## AboutMe
+- [About Me](https://github.com/coutureone/gitblog/issues/22)--2024-12-23
