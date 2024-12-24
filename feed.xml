@@ -1,5 +1,39 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/coutureone/gitblog</id><title>RSS feed of coutureone's gitblog</title><updated>2024-12-24T02:49:43.710827+00:00</updated><link href="https://github.com/coutureone/gitblog"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/coutureone/gitblog/issues/23</id><title>Windows 11取消右键二级菜单</title><updated>2024-12-24T02:49:43.925141+00:00</updated><content type="html"><![CDATA[<p>因为不习惯<code>Windows11</code>鼠标右键反人类的二级菜单方式，采用命令的方式给屏蔽掉</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/coutureone/gitblog</id><title>RSS feed of coutureone's gitblog</title><updated>2024-12-24T02:51:05.264300+00:00</updated><link href="https://github.com/coutureone/gitblog"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/coutureone/gitblog/issues/24</id><title>M1Pro Parallels Desktop安装统信UOS</title><updated>2024-12-24T02:51:05.648816+00:00</updated><content type="html"><![CDATA[<h2>1.下载镜像</h2>
+<p>点击下载连接[<a href="https://www.chinauos.com/resource/download-professional">UOS</a>](https://www.chinauos.com/resource/download-professional)，选择下面的镜像，其他版本无法安装。</p>
+<p><img src="https://s3.qjqq.cn/50/67471bafee086.webp%21color" alt="" /></p>
+<h2>2.安装系统</h2>
+<h4>2.1选择刚才下载好的镜像</h4>
+<p><img src="https://s3.qjqq.cn/50/67471c071f117.webp%21color" alt="" /></p>
+<h4>2.2手动选则</h4>
+<p><img src="https://s3.qjqq.cn/50/67471c526a99c.webp%21color" alt="" /></p>
+<h4>2.3出现下面这个选择<code>继续</code></h4>
+<p><img src="https://s3.qjqq.cn/50/67471c8576019.webp%21color" alt="" /></p>
+<h4>2.5选择其他<code>Linux</code></h4>
+<p><img src="https://s3.qjqq.cn/50/67471cbdb6c07.webp%21color" alt="image-20241127212100721" /></p>
+<h4>2.6 然后<code>继续</code>，创建，选择第一个安装即可，这里过程省略，过于简单</h4>
+<p><img src="https://s3.qjqq.cn/50/67471d1a291fd.webp%21color" alt="" /></p>
+<h2>3.安装 <code>Parallels Tools</code></h2>
+<p>这时候你需要进入<code>root</code>模式下，关于如何进入<code>root</code>模式请看我的另一篇文章</p>
+<h4>3.1进入root模式以后，首先就挂载<code>Parallels Tools</code>，点击安装以后自动挂载。</h4>
+<p><img src="https://s3.qjqq.cn/50/67471e2276470.webp%21color" alt="" /></p>
+<h4>3.2在计算机里面可以看到挂载好的工具，双击打开，选择空白处，用终端打开。</h4>
+<p><img src="https://s3.qjqq.cn/50/67471e7765012.webp%21color" alt="" /></p>
+<p>下图所示：</p>
+<p><img src="https://s3.qjqq.cn/50/67471eb9557dd.webp%21color" alt="" /></p>
+<h4>3.5设置里面安装任意应用需要打开，否则终端会报错</h4>
+<pre><code class="language-bash">Coutrue@CoutrueUOS:/media/Coutrue/Parallels Tools$ 
+Coutrue@CoutrueUOS:/media/Coutrue/Parallels Tools$ sudo -s
+请输入密码:
+验证成功
+root@CoutrueUOS:/media/Coutrue/Parallels Tools# ./install
+</code></pre>
+<p><img src="https://s3.qjqq.cn/50/67471f2d93011.webp%21color" alt="" /></p>
+<h4>3.6执行完成以后一路next即可，一直到回车重启。</h4>
+<p><img src="https://s3.qjqq.cn/50/67471f7ca4709.webp%21color" alt="" /></p>
+<h4>3.7当桌面出现<code>Parallels Shared Folders</code>，说明安装成功，和Mac之间相互已经打通了。</h4>
+<p><img src="https://s3.qjqq.cn/50/6747207594d96.webp%21color" alt="" /></p>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/24"/><category term="技术"/><category term="top"/><published>2024-12-24T02:50:29+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/23</id><title>Windows 11取消右键二级菜单</title><updated>2024-12-24T02:51:05.817259+00:00</updated><content type="html"><![CDATA[<p>因为不习惯<code>Windows11</code>鼠标右键反人类的二级菜单方式，采用命令的方式给屏蔽掉</p>
 <p>修改成<code>Windows10</code>样式</p>
 <p><strong>搜索<code>CMD</code>，然后点击管理员运行</strong></p>
 <pre><code class="language-改win10：">reg add &quot;HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32&quot; /f /ve
@@ -14,5 +48,5 @@
 <p><code>Windows11</code>命令：</p>
 <pre><code class="language-bash">reg delete &quot;HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}&quot; /f
 </code></pre>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/23"/><category term="技术"/><published>2024-12-24T02:49:19+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/22</id><title>About Me</title><updated>2024-12-24T02:49:44.027228+00:00</updated><content type="html"><![CDATA[<p>一个不会写代码的技术~</p>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/23"/><category term="技术"/><published>2024-12-24T02:49:19+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/22</id><title>About Me</title><updated>2024-12-24T02:51:05.984130+00:00</updated><content type="html"><![CDATA[<p>一个不会写代码的技术~</p>
 ]]></content><link href="https://github.com/coutureone/gitblog/issues/22"/><category term="AboutMe"/><published>2024-12-23T05:31:10+00:00</published></entry></feed>
