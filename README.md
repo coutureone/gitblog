@@ -16,6 +16,7 @@ My personal blog([About Me](https://github.com/coutureone/gitblog/issues/22)) us
 - [M1Pro Parallels Desktop安装统信UOS](https://github.com/coutureone/gitblog/issues/24)--2024-12-24
 ## 信创
 - [ 统信UOS桌面版安装VNC](https://github.com/coutureone/gitblog/issues/25)--2024-12-24
+- [M1Pro Parallels Desktop安装统信UOS](https://github.com/coutureone/gitblog/issues/24)--2024-12-24
 ## 技术
 - [ 统信UOS桌面版安装VNC](https://github.com/coutureone/gitblog/issues/25)--2024-12-24
 - [M1Pro Parallels Desktop安装统信UOS](https://github.com/coutureone/gitblog/issues/24)--2024-12-24
