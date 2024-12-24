@@ -6,6 +6,7 @@ My personal blog([About Me](https://github.com/coutureone/gitblog/issues/22)) us
 ## 置顶文章
 - [M1Pro Parallels Desktop安装统信UOS](https://github.com/coutureone/gitblog/issues/24)--2024-12-24
 ## 最近更新
+- [ 统信UOS桌面版安装VNC](https://github.com/coutureone/gitblog/issues/25)--2024-12-24
 - [M1Pro Parallels Desktop安装统信UOS](https://github.com/coutureone/gitblog/issues/24)--2024-12-24
 - [Windows 11取消右键二级菜单](https://github.com/coutureone/gitblog/issues/23)--2024-12-24
 - [About Me](https://github.com/coutureone/gitblog/issues/22)--2024-12-23
@@ -13,6 +14,9 @@ My personal blog([About Me](https://github.com/coutureone/gitblog/issues/22)) us
 - [About Me](https://github.com/coutureone/gitblog/issues/22)--2024-12-23
 ## top
 - [M1Pro Parallels Desktop安装统信UOS](https://github.com/coutureone/gitblog/issues/24)--2024-12-24
+## 信创
+- [ 统信UOS桌面版安装VNC](https://github.com/coutureone/gitblog/issues/25)--2024-12-24
 ## 技术
+- [ 统信UOS桌面版安装VNC](https://github.com/coutureone/gitblog/issues/25)--2024-12-24
 - [M1Pro Parallels Desktop安装统信UOS](https://github.com/coutureone/gitblog/issues/24)--2024-12-24
 - [Windows 11取消右键二级菜单](https://github.com/coutureone/gitblog/issues/23)--2024-12-24
