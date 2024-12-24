@@ -4,6 +4,9 @@ My personal blog([About Me](https://github.com/coutureone/gitblog/issues/22)) us
 [RSS Feed](https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml)
 
 ## 最近更新
+- [Windows 11取消右键二级菜单](https://github.com/coutureone/gitblog/issues/23)--2024-12-24
 - [About Me](https://github.com/coutureone/gitblog/issues/22)--2024-12-23
 ## AboutMe
 - [About Me](https://github.com/coutureone/gitblog/issues/22)--2024-12-23
+## 技术
+- [Windows 11取消右键二级菜单](https://github.com/coutureone/gitblog/issues/23)--2024-12-24

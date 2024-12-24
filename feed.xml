@@ -1,3 +1,18 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/coutureone/gitblog</id><title>RSS feed of coutureone's gitblog</title><updated>2024-12-23T06:06:51.388162+00:00</updated><link href="https://github.com/coutureone/gitblog"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/coutureone/gitblog/issues/22</id><title>About Me</title><updated>2024-12-23T06:06:51.709235+00:00</updated><content type="html"><![CDATA[<p>一个不会写代码的技术~</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/coutureone/gitblog</id><title>RSS feed of coutureone's gitblog</title><updated>2024-12-24T02:49:43.710827+00:00</updated><link href="https://github.com/coutureone/gitblog"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/coutureone/gitblog/issues/23</id><title>Windows 11取消右键二级菜单</title><updated>2024-12-24T02:49:43.925141+00:00</updated><content type="html"><![CDATA[<p>因为不习惯<code>Windows11</code>鼠标右键反人类的二级菜单方式，采用命令的方式给屏蔽掉</p>
+<p>修改成<code>Windows10</code>样式</p>
+<p><strong>搜索<code>CMD</code>，然后点击管理员运行</strong></p>
+<pre><code class="language-改win10：">reg add &quot;HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32&quot; /f /ve
+</code></pre>
+<!--more-->
+<p><strong>然后回车执行，会提示<code>successful</code></strong></p>
+<p><strong>然后去任务管理里面去重启<code>Windows资源管理器</code></strong></p>
+<p><img src="https://s2.loli.net/2023/07/21/p3aCJT6njeslfFH.png" alt="" /></p>
+<p><strong>重启完成以后打开，鼠标右键如下，成功</strong></p>
+<p><img src="https://s2.loli.net/2023/07/21/vxnXSlNf8Hp7zsk.png" alt="" /></p>
+<p>如果想改回原始的，命令如下，重复上面一样的操，作执行<code>命令</code>-&gt;<code>重启Windows资源管理器</code></p>
+<p><code>Windows11</code>命令：</p>
+<pre><code class="language-bash">reg delete &quot;HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}&quot; /f
+</code></pre>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/23"/><category term="技术"/><published>2024-12-24T02:49:19+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/22</id><title>About Me</title><updated>2024-12-24T02:49:44.027228+00:00</updated><content type="html"><![CDATA[<p>一个不会写代码的技术~</p>
 ]]></content><link href="https://github.com/coutureone/gitblog/issues/22"/><category term="AboutMe"/><published>2024-12-23T05:31:10+00:00</published></entry></feed>
