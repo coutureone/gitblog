@@ -9,26 +9,25 @@ from github import Github
 from lxml.etree import CDATA
 from marko.ext.gfm import gfm as marko
 
-MD_HEAD = """## [Gitblog](https://coutureone.github.io/gitblog/)
-个人博客，感谢[yihong0618](https://github.com/yihong0618/gitblog)大佬对本项目的开源，用于记录一些琐碎
-[RSS Feed](https://raw.githubusercontent.com/{repo_name}/master/feed.xml)
+MD_HEAD = """**<p align="center">[Couture's Blog](https://blog.coutures.top)</p>**
+====
+
+**<p align="center">用于记录一些琐碎</p>**
+
+
+## 联系方式
+- Twitter：[@coutureone](https://twitter.com/coutureone)
+- Telegram：[@Coutureone](https://t.me/Coutureone)
+- Email：[couturecome@gmail.com](mailto:couturecome@gmail.com)
+- Blog：[https://blog.coutures.top](https://blog.coutures.top)
+- RSS：[RSS Feed](https://raw.githubusercontent.com/{repo_name}/master/feed.xml)
 """
 
-BACKUP_DIR = "BACKUP"
+BACKUP_DIR = "backup"
 ANCHOR_NUMBER = 5
 TOP_ISSUES_LABELS = ["Top"]
 TODO_ISSUES_LABELS = ["TODO"]
-FRIENDS_LABELS = ["Friends"]
-ABOUT_LABELS = ["About"]
-IGNORE_LABELS = FRIENDS_LABELS + TOP_ISSUES_LABELS + TODO_ISSUES_LABELS + ABOUT_LABELS
-
-FRIENDS_TABLE_HEAD = "| Name | Link | Desc | \n | ---- | ---- | ---- |\n"
-FRIENDS_TABLE_TEMPLATE = "| {name} | {link} | {desc} |\n"
-FRIENDS_INFO_DICT = {
-    "名字": "",
-    "链接": "",
-    "描述": "",
-}
+IGNORE_LABELS = TOP_ISSUES_LABELS + TODO_ISSUES_LABELS
 
 
 def get_me(user):
@@ -37,33 +36,6 @@ def get_me(user):
 
 def is_me(issue, me):
     return issue.user.login == me
-
-
-def is_hearted_by_me(comment, me):
-    reactions = list(comment.get_reactions())
-    for r in reactions:
-        if r.content == "heart" and r.user.login == me:
-            return True
-    return False
-
-
-def _make_friend_table_string(s):
-    info_dict = FRIENDS_INFO_DICT.copy()
-    try:
-        string_list = s.splitlines()
-        # drop empty line
-        string_list = [l for l in string_list if l and not l.isspace()]
-        for l in string_list:
-            string_info_list = re.split("：", l)
-            if len(string_info_list) < 2:
-                continue
-            info_dict[string_info_list[0]] = string_info_list[1]
-        return FRIENDS_TABLE_TEMPLATE.format(
-            name=info_dict["名字"], link=info_dict["链接"], desc=info_dict["描述"]
-        )
-    except Exception as e:
-        print(str(e))
-        return
 
 
 # help to covert xml vaild string
@@ -149,32 +121,6 @@ def add_md_top(repo, md, me):
         for issue in top_issues:
             if is_me(issue, me):
                 add_issue_info(issue, md)
-
-
-def add_md_firends(repo, md, me):
-
-    s = FRIENDS_TABLE_HEAD
-    friends_issues = list(repo.get_issues(labels=FRIENDS_LABELS))
-    if not FRIENDS_LABELS or not friends_issues:
-        return
-    friends_issue_number = friends_issues[0].number
-    for issue in friends_issues:
-        for comment in issue.get_comments():
-            if is_hearted_by_me(comment, me):
-                try:
-                    s += _make_friend_table_string(comment.body or "")
-                except Exception as e:
-                    print(str(e))
-                    pass
-    s = markdown.markdown(s, output_format="html", extensions=["extra"])
-    with open(md, "a+", encoding="utf-8") as md:
-        md.write(
-            f"## [友情链接](https://github.com/{str(me)}/gitblog/issues/{friends_issue_number})\n"
-        )
-        md.write("<details><summary>显示</summary>\n")
-        md.write(s)
-        md.write("</details>\n")
-        md.write("\n\n")
 
 
 def add_md_recent(repo, md, me, limit=5):
@@ -287,7 +233,7 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
     repo = get_repo(user, repo_name)
     # add to readme one by one, change order here
     add_md_header("README.md", repo_name)
-    for func in [add_md_firends, add_md_top, add_md_recent, add_md_label, add_md_todo]:
+    for func in [add_md_top, add_md_recent, add_md_label, add_md_todo]:
         func(repo, "README.md", me)
 
     generate_rss_feed(repo, "feed.xml", me)
