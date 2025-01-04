@@ -37,10 +37,10 @@ jobs:
       - name: Generate new md
         run: |
           source venv/bin/activate
-          echo "GitHub Token: ${{ secrets.G_T }}"
+          echo "GitHub Token: ${{ secrets.G_TOKEN }}"
           echo "Repository: ${{ github.repository }}"
           echo "Issue Number: ${{ github.event.issue.number }}"
-          python main.py ${{ secrets.G_T }} ${{ github.repository }} --issue_number '${{ github.event.issue.number }}'
+          python main.py ${{ secrets.G_TOKEN }} ${{ github.repository }} --issue_number '${{ github.event.issue.number }}'
 
       - name: Push README
         run: |
