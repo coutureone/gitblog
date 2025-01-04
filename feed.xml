@@ -1,3 +1,32 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/coutureone/gitblog</id><title>RSS feed of coutureone's gitblog</title><updated>2025-01-04T08:11:47.550921+00:00</updated><link href="https://github.com/coutureone/gitblog"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/coutureone/gitblog/issues/3</id><title>测试过</title><updated>2025-01-04T08:11:47.802880+00:00</updated><content type="html"><![CDATA[<p>测试</p>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/3"/><published>2025-01-04T08:00:28+00:00</published></entry></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/coutureone/gitblog</id><title>RSS feed of coutureone's gitblog</title><updated>2025-01-04T17:46:01.267764+00:00</updated><link href="https://github.com/coutureone/gitblog"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/coutureone/gitblog/issues/4</id><title>测试</title><updated>2025-01-04T17:46:01.491627+00:00</updated><content type="html"><![CDATA[<hr />
+<h4>阿里云镜像源</h4>
+<!--more-->
+<pre><code class="language-bash">[root@VM-4-3-centos ~]# mkdir -p /etc/docker
+[root@VM-4-3-centos ~]# sudo tee /etc/docker/daemon.json &lt;&lt;-&#x27;EOF&#x27;
+&gt; {
+&gt;   &quot;registry-mirrors&quot;: [&quot;https://82m9ar63.mirror.aliyuncs.com&quot;],
+&gt;   &quot;exec-opts&quot;: [&quot;native.cgroupdriver=systemd&quot;],
+&gt;   &quot;log-driver&quot;: &quot;json-file&quot;,
+&gt;   &quot;log-opts&quot;: {
+&gt;     &quot;max-size&quot;: &quot;100m&quot;
+&gt;   },
+&gt;   &quot;storage-driver&quot;: &quot;overlay2&quot;
+&gt; }
+&gt; EOF
+&lt;!--more--&gt;
+{
+  &quot;registry-mirrors&quot;: [&quot;https://82m9ar63.mirror.aliyuncs.com&quot;],
+  &quot;exec-opts&quot;: [&quot;native.cgroupdriver=systemd&quot;],
+  &quot;log-driver&quot;: &quot;json-file&quot;,
+  &quot;log-opts&quot;: {
+    &quot;max-size&quot;: &quot;100m&quot;
+  },
+  &quot;storage-driver&quot;: &quot;overlay2&quot;
+}
+[root@VM-4-3-centos ~]# sudo systemctl daemon-reload
+[root@VM-4-3-centos ~]# sudo systemctl restart docker
+[root@VM-4-3-centos ~]# docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+</code></pre>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/4"/><category term="测试"/><published>2025-01-04T17:45:37+00:00</published></entry></feed>
