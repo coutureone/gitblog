@@ -19,6 +19,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -36,6 +37,9 @@ jobs:
       - name: Generate new md
         run: |
           source venv/bin/activate
+          echo "GitHub Token: ${{ secrets.G_T }}"
+          echo "Repository: ${{ github.repository }}"
+          echo "Issue Number: ${{ github.event.issue.number }}"
           python main.py ${{ secrets.G_T }} ${{ github.repository }} --issue_number '${{ github.event.issue.number }}'
 
       - name: Push README
