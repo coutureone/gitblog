@@ -12,6 +12,4 @@
 - RSS：[RSS Feed](https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml)
 
 ## 最近更新
-- [测试](https://github.com/coutureone/gitblog/issues/4)--2025-01-04
-## 测试
-- [测试](https://github.com/coutureone/gitblog/issues/4)--2025-01-04
+- [建站成功✌️](https://github.com/coutureone/gitblog/issues/5)--2025-01-05

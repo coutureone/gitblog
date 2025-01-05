@@ -1,31 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/coutureone/gitblog</id><title>RSS feed of coutureone's gitblog</title><updated>2025-01-04T17:49:15.902782+00:00</updated><link href="https://github.com/coutureone/gitblog"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/coutureone/gitblog/issues/4</id><title>测试</title><updated>2025-01-04T17:49:16.118898+00:00</updated><content type="html"><![CDATA[<p>阿里云镜像源</p>
-<!--more-->
-<pre><code class="language-bash">[root@VM-4-3-centos ~]# mkdir -p /etc/docker
-[root@VM-4-3-centos ~]# sudo tee /etc/docker/daemon.json &lt;&lt;-&#x27;EOF&#x27;
-&gt; {
-&gt;   &quot;registry-mirrors&quot;: [&quot;https://82m9ar63.mirror.aliyuncs.com&quot;],
-&gt;   &quot;exec-opts&quot;: [&quot;native.cgroupdriver=systemd&quot;],
-&gt;   &quot;log-driver&quot;: &quot;json-file&quot;,
-&gt;   &quot;log-opts&quot;: {
-&gt;     &quot;max-size&quot;: &quot;100m&quot;
-&gt;   },
-&gt;   &quot;storage-driver&quot;: &quot;overlay2&quot;
-&gt; }
-&gt; EOF
-&lt;!--more--&gt;
-{
-  &quot;registry-mirrors&quot;: [&quot;https://82m9ar63.mirror.aliyuncs.com&quot;],
-  &quot;exec-opts&quot;: [&quot;native.cgroupdriver=systemd&quot;],
-  &quot;log-driver&quot;: &quot;json-file&quot;,
-  &quot;log-opts&quot;: {
-    &quot;max-size&quot;: &quot;100m&quot;
-  },
-  &quot;storage-driver&quot;: &quot;overlay2&quot;
-}
-[root@VM-4-3-centos ~]# sudo systemctl daemon-reload
-[root@VM-4-3-centos ~]# sudo systemctl restart docker
-[root@VM-4-3-centos ~]# docker ps
-CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
-</code></pre>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/4"/><category term="测试"/><published>2025-01-04T17:45:37+00:00</published></entry></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/coutureone/gitblog</id><title>RSS feed of coutureone's gitblog</title><updated>2025-01-05T13:50:21.580738+00:00</updated><link href="https://github.com/coutureone/gitblog"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/coutureone/gitblog/issues/5</id><title>建站成功✌️</title><updated>2025-01-05T13:50:21.944055+00:00</updated><content type="html"><![CDATA[<blockquote>
+<p>谨以此篇文章作为建站纪念，感谢所有大佬的帮助，我会在文章结尾提供连接</p>
+</blockquote>
+<p> 经过自己两周的周末时间，终于是给这个通过issues写博客弄好了，前后端分离，都是通过GitHub托管的方式，聊聊一些问题：</p>
+<ul>
+<li>项目主要参考：<a href="https://github.com/superleeyom">superleeyom</a>大佬的博客。</li>
+<li>前后端分离式，前端就是GitHub Page，但是我也进行Vercel部署了，在经过Vercel部署的时候并不是直接导入那么简单，因为引入的是<a href="https://github.com/LoeiFy">LoeiFy</a>大佬的<a href="https://github.com/LoeiFy/Mirror">Mirror</a>项目，很巧妙的用的用Github API 进行调用，这里加密绑定的是域名，如果前端的page直接导入Vercel打开就是没有权限，也不会显示，其实并不操作问题，而是需要对域名进行绑定解析即可。</li>
+<li>后端主要是参考的<a href="https://github.com/yihong0618">yihong0618</a>大佬的<a href="https://github.com/yihong0618/gitblog">gitblog</a>开源项目</li>
+<li>关于页面的魔改，页面的魔改我想用cursor在我index里面加入暗夜模式以及切换按钮，但是AI并不是万能，这里要感谢<a href="https://github.com/isYangs">isYangs</a>大佬对于本博客的暗黑模式提供的大力帮助。
+<img src="https://github.com/coutureone/gitblog/blob/main/img/white.png" alt="white" />
+<img src="https://github.com/coutureone/gitblog/blob/main/img/dark.png" alt="dark" /></li>
+</ul>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/5"/><published>2025-01-05T13:49:53+00:00</published></entry></feed>
