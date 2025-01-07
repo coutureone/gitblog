@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/coutureone/gitblog</id><title>RSS feed of coutureone's gitblog</title><updated>2025-01-05T13:50:21.580738+00:00</updated><link href="https://github.com/coutureone/gitblog"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/coutureone/gitblog/issues/5</id><title>建站成功✌️</title><updated>2025-01-05T13:50:21.944055+00:00</updated><content type="html"><![CDATA[<blockquote>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/coutureone/gitblog</id><title>RSS feed of coutureone's gitblog</title><updated>2025-01-07T00:46:45.695019+00:00</updated><link href="https://github.com/coutureone/gitblog"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/coutureone/gitblog/issues/5</id><title>建站成功✌️</title><updated>2025-01-07T00:46:45.925129+00:00</updated><content type="html"><![CDATA[<blockquote>
 <p>谨以此篇文章作为建站纪念，感谢所有大佬的帮助，我会在文章结尾提供连接</p>
 </blockquote>
 <p> 经过自己两周的周末时间，终于是给这个通过issues写博客弄好了，前后端分离，都是通过GitHub托管的方式，聊聊一些问题：</p>
@@ -7,8 +7,6 @@
 <li>项目主要参考：<a href="https://github.com/superleeyom">superleeyom</a>大佬的博客。</li>
 <li>前后端分离式，前端就是GitHub Page，但是我也进行Vercel部署了，在经过Vercel部署的时候并不是直接导入那么简单，因为引入的是<a href="https://github.com/LoeiFy">LoeiFy</a>大佬的<a href="https://github.com/LoeiFy/Mirror">Mirror</a>项目，很巧妙的用的用Github API 进行调用，这里加密绑定的是域名，如果前端的page直接导入Vercel打开就是没有权限，也不会显示，其实并不操作问题，而是需要对域名进行绑定解析即可。</li>
 <li>后端主要是参考的<a href="https://github.com/yihong0618">yihong0618</a>大佬的<a href="https://github.com/yihong0618/gitblog">gitblog</a>开源项目</li>
-<li>关于页面的魔改，页面的魔改我想用cursor在我index里面加入暗夜模式以及切换按钮，但是AI并不是万能，这里要感谢<a href="https://github.com/isYangs">isYangs</a>大佬对于本博客的暗黑模式提供的大力帮助。
-<img src="https://github.com/coutureone/gitblog/blob/main/img/white.png" alt="white" />
-<img src="https://github.com/coutureone/gitblog/blob/main/img/dark.png" alt="dark" /></li>
+<li>关于页面的魔改，页面的魔改我想用cursor在我index里面加入暗夜模式以及切换按钮，但是AI并不是万能，这里要感谢<a href="https://github.com/isYangs">isYangs</a>大佬对于本博客的暗黑模式提供的大力帮助。</li>
 </ul>
 ]]></content><link href="https://github.com/coutureone/gitblog/issues/5"/><published>2025-01-05T13:49:53+00:00</published></entry></feed>
