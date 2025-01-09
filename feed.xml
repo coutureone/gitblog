@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/coutureone/gitblog</id><title>RSS feed of coutureone's gitblog</title><updated>2025-01-07T09:19:21.609646+00:00</updated><link href="https://github.com/coutureone/gitblog"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/coutureone/gitblog/issues/5</id><title>建站成功✌️</title><updated>2025-01-07T09:19:21.845767+00:00</updated><content type="html"><![CDATA[<blockquote>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/coutureone/gitblog</id><title>RSS feed of coutureone's gitblog</title><updated>2025-01-09T12:22:04.917805+00:00</updated><link href="https://github.com/coutureone/gitblog"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/coutureone/gitblog/issues/6</id><title>关于我</title><updated>2025-01-09T12:22:05.118950+00:00</updated><content type="html"><![CDATA[<h3>简介</h3>
+<ul>
+<li>座右铭：物来顺应 未来不迎 当时不杂 既过不恋；</li>
+<li>出生：一个土生土长的农村孩子；</li>
+<li>工作：不是当牛马，就在牛马的路上；</li>
+<li>爱好：喜欢运功，喜欢技术。</li>
+</ul>
+<h4>你长得那么好看，谢谢你来看我~</h4>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/6"/><category term="About Me"/><published>2025-01-09T12:21:40+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/5</id><title>建站成功✌️</title><updated>2025-01-09T12:22:05.215942+00:00</updated><content type="html"><![CDATA[<blockquote>
 <p>谨以此篇文章作为建站纪念，感谢所有大佬的帮助，我会在文章结尾提供连接</p>
 </blockquote>
 <p> 经过自己两周的周末时间，终于是给这个通过issues写博客弄好了，前后端分离，都是通过GitHub托管的方式，聊聊一些问题：</p>
