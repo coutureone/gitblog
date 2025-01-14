@@ -12,7 +12,10 @@
 - RSS：[RSS Feed](https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml)
 
 ## 最近更新
+- [一不留神的网络环路](https://github.com/coutureone/gitblog/issues/7)--2025-01-14
 - [关于我](https://github.com/coutureone/gitblog/issues/6)--2025-01-09
 - [建站成功✌️](https://github.com/coutureone/gitblog/issues/5)--2025-01-05
 ## About Me
 - [关于我](https://github.com/coutureone/gitblog/issues/6)--2025-01-09
+## 技术
+- [一不留神的网络环路](https://github.com/coutureone/gitblog/issues/7)--2025-01-14

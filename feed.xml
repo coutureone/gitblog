@@ -1,5 +1,65 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/coutureone/gitblog</id><title>RSS feed of coutureone's gitblog</title><updated>2025-01-09T12:22:04.917805+00:00</updated><link href="https://github.com/coutureone/gitblog"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/coutureone/gitblog/issues/6</id><title>关于我</title><updated>2025-01-09T12:22:05.118950+00:00</updated><content type="html"><![CDATA[<h3>简介</h3>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/coutureone/gitblog</id><title>RSS feed of coutureone's gitblog</title><updated>2025-01-14T08:20:11.157289+00:00</updated><link href="https://github.com/coutureone/gitblog"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/coutureone/gitblog/issues/7</id><title>一不留神的网络环路</title><updated>2025-01-14T08:20:11.557808+00:00</updated><content type="html"><![CDATA[<blockquote>
+<p>一个小小的操作失误，引发的一次生产事故</p>
+</blockquote>
+<p> 关于在<code>vsphere</code>中给划分的<code>VLAN</code>的网关，作为虚拟机的<code>IP</code>下发了，<code> VLAN</code>号和<code>IP</code>地址都是固定的，导致了一次该网段下面的<code>Linux</code>服务器网络直接发生了环路。但是<code>Windows</code>集群是不受到影响的，遇到这种问题一般都不会想到会是<code>ARP</code>冲突问题，一半都是排查服务器，网络，路由，防火墙等问题，没想到<code>ARP</code>问题，但是最后给<code>VLAN</code>直接删除，但是网络还是正常能通的，这就说明了问题了。<code>ARP</code>冲突，根据<code>mac</code>地址，然后找到对应的那台服务器的，关机（或者是修改IP），然后网络恢复正常。</p>
+<p> 这次网络事故真的是看不起眼的问题，导致了生产事故的产生，真的是吃一堑长一智因为想弄清除问题真正产生的原因，自己也是用<code>AI</code>和浏览器去查询了一下<code>Windows</code>和<code>Linux</code>网络规则，具体可以参考下面说明。</p>
+<p> 这篇博客就到这里，真的是一次很看不眼的问题引起的生产事故，到此这个问题结束，不说了，该收拾东西回家，下班了~</p>
+<p>在给网关配置IP地址时，Linux和Windows的行为差异主要源于两者在网络栈实现和路由处理机制上的不同。以下是对这一问题的详细分析：</p>
+<hr />
+<h3>1. <strong>Linux 的环路问题</strong></h3>
+<p>在Linux中，如果将网关的IP地址配置为本机的一个接口IP，可能会导致路由环路。原因如下：</p>
+<ul>
+<li><strong>路由表处理机制</strong>：
+Linux的路由表会明确指定网关地址，如果网关地址是本机接口IP，数据包会被发送到本机，而不是外部网络。这会导致数据包在本地循环，无法正确转发。</li>
+<li><strong>ARP 请求</strong>：
+当Linux尝试将数据包发送到网关时，会发送ARP请求来解析网关的MAC地址。如果网关IP是本机接口IP，ARP请求会解析到本机，导致数据包被送回本机，形成环路。</li>
+<li><strong>默认行为</strong>：
+Linux默认不会检查网关IP是否为本机接口IP，因此容易因配置错误引发环路。</li>
+</ul>
+<hr />
+<h3>2. <strong>Windows 的环路避免机制</strong></h3>
+<p>Windows在网络栈实现上对网关配置有更强的检查和保护机制，因此不容易出现环路问题。原因如下：</p>
+<ul>
+<li><strong>网关IP检查</strong>：
+Windows在配置网关时会检查网关IP是否为本机接口IP。如果检测到网关IP是本机IP，Windows会拒绝该配置或忽略该网关，从而避免环路。</li>
+<li><strong>路由优先级</strong>：
+Windows的路由表处理机制会优先处理直连路由（即本机接口所在的网络），而不是通过网关转发。如果网关IP是本机接口IP，Windows会优先将数据包发送到本地接口，而不是尝试通过网关转发。</li>
+<li><strong>ARP 处理</strong>：
+Windows的ARP处理机制更加智能，能够避免将网关IP解析为本机MAC地址，从而防止数据包在本地循环。</li>
+</ul>
+<hr />
+<h3>3. <strong>根本原因</strong></h3>
+<ul>
+<li><strong>Linux</strong>：更注重灵活性和可配置性，允许用户自由配置路由和网关，但需要用户对网络配置有深入理解，否则容易引发问题。</li>
+<li><strong>Windows</strong>：更注重用户体验和安全性，内置了许多检查和保护机制，防止用户因配置错误导致网络问题。</li>
+</ul>
+<hr />
+<h3>4. <strong>如何避免Linux中的环路问题</strong></h3>
+<p>如果在Linux中需要避免因网关配置导致的环路问题，可以采取以下措施：</p>
+<ul>
+<li>
+<p><strong>检查网关配置</strong>：确保网关IP不是本机接口IP。</p>
+</li>
+<li>
+<p><strong>使用路由规则</strong>：通过<code>ip route</code>命令明确指定路由规则，避免数据包被错误地发送到本机。</p>
+</li>
+<li>
+<p><strong>启用反向路径过滤（RPF）</strong>：通过<code>sysctl</code>启用反向路径过滤，防止数据包从错误的方向进入系统。</p>
+<p>bash</p>
+<p>复制</p>
+<pre><code>sysctl -w net.ipv4.conf.all.rp_filter=1
+sysctl -w net.ipv4.conf.default.rp_filter=1
+</code></pre>
+</li>
+<li>
+<p><strong>使用防火墙规则</strong>：通过<code>iptables</code>或<code>nftables</code>限制数据包的流向，防止环路。</p>
+</li>
+</ul>
+<hr />
+<h3>总结</h3>
+<p>Windows和Linux在网关IP配置上的行为差异，主要源于两者在网络栈实现和路由处理机制上的不同。Windows通过内置的检查和保护机制避免了环路问题，而Linux则更依赖用户的配置和管理能力。为了避免Linux中的环路问题，用户需要仔细检查网关配置，并采取适当的防护措施。</p>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/7"/><category term="技术"/><published>2025-01-14T08:19:43+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/6</id><title>关于我</title><updated>2025-01-14T08:20:11.729162+00:00</updated><content type="html"><![CDATA[<h3>简介</h3>
 <ul>
 <li>座右铭：物来顺应 未来不迎 当时不杂 既过不恋；</li>
 <li>出生：一个土生土长的农村孩子；</li>
@@ -7,7 +67,7 @@
 <li>爱好：喜欢运功，喜欢技术。</li>
 </ul>
 <h4>你长得那么好看，谢谢你来看我~</h4>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/6"/><category term="About Me"/><published>2025-01-09T12:21:40+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/5</id><title>建站成功✌️</title><updated>2025-01-09T12:22:05.215942+00:00</updated><content type="html"><![CDATA[<blockquote>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/6"/><category term="About Me"/><published>2025-01-09T12:21:40+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/5</id><title>建站成功✌️</title><updated>2025-01-14T08:20:11.815218+00:00</updated><content type="html"><![CDATA[<blockquote>
 <p>谨以此篇文章作为建站纪念，感谢所有大佬的帮助，我会在文章结尾提供连接</p>
 </blockquote>
 <p> 经过自己两周的周末时间，终于是给这个通过issues写博客弄好了，前后端分离，都是通过GitHub托管的方式，聊聊一些问题：</p>
