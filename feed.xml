@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/coutureone/gitblog</id><title>RSS feed of coutureone's gitblog</title><updated>2025-01-19T01:48:46.336969+00:00</updated><link href="https://github.com/coutureone/gitblog"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/coutureone/gitblog/issues/8</id><title>2024从那里写呢</title><updated>2025-01-19T01:48:46.560527+00:00</updated><content type="html"><![CDATA[<blockquote>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/coutureone/gitblog</id><title>RSS feed of coutureone's gitblog</title><updated>2025-01-19T01:50:36.468819+00:00</updated><link href="https://github.com/coutureone/gitblog"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/coutureone/gitblog/issues/8</id><title>2024从那里写呢</title><updated>2025-01-19T01:50:36.749452+00:00</updated><content type="html"><![CDATA[<blockquote>
 <p>光阴似箭催人老，日月如梭趱少年。</p>
 </blockquote>
 <p>​	恍恍惚惚又是一年，2024好像自己做了很多事情，又好像什么都没做，工作，生活，学习...这一年自己经历太多了，身边亲人的离世让我真正感受到了，没有什么比健康更重要，我也开始给跑步拾起来，看这自己大学时候的跑步记录，想要达到自己的当时配速和心率比，可能我需要跑1000公里都不一定能回去了，当然目前也是跑了将近600公里，和那时候的自己的心肺功能相差还是很多，初心不忘，贵在坚持，以健康为主。</p>
@@ -8,9 +8,8 @@
 <p>​	25年自己想做的事情有很多，希望自己能够真正的沉淀下来，好好打磨自己。关于考研我觉得自己是应该提上日程了，我在纠结这个在职研究生自己读还是不读，如果你也有相同的处境，我倒是希望你可以分享一下你的建议。对于我个人来说脱产去读研不太现实。</p>
 <p>​	说到这里，深夜，我应该是要开始收拾东西了，放假了，有钱没钱回家过年，开始收拾东西，准备回家了。</p>
 <h4>感谢</h4>
-<p>[<a href="https://github.com/0x676e67">0x676e67</a>](https://github.com/0x676e67) [<a href="https://github.com/yihong0618">yihong0618</a>](https://github.com/yihong0618) [<a href="https://github.com/WuLongMiTaoLaiYiDa">WuLongMiTaoLaiYiDa</a>](https://github.com/WuLongMiTaoLaiYiDa) [<a href="https://github.com/mrasong">mrasong</a>](https://github.com/mrasong) [<a href="https://github.com/everfu">everfu</a>](https://github.com/everfu)</p>
-<p>[<a href="https://github.com/isYangs">isYangs</a>](https://github.com/isYangs) [<a href="https://github.com/superleeyom">superleeyom</a>](https://github.com/superleeyom)</p>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/8"/><category term="总结"/><published>2025-01-19T01:48:17+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/7</id><title>一不留神的网络环路</title><updated>2025-01-19T01:48:46.640670+00:00</updated><content type="html"><![CDATA[<blockquote>
+<p>@0x676e67 @yihong0618 @WuLongMiTaoLaiYiDa @mrasong @isYangs @superleeyom @everfu</p>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/8"/><category term="总结"/><published>2025-01-19T01:48:17+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/7</id><title>一不留神的网络环路</title><updated>2025-01-19T01:50:36.881523+00:00</updated><content type="html"><![CDATA[<blockquote>
 <p>一个小小的操作失误，引发的一次生产事故</p>
 </blockquote>
 <p> 关于在<code>vsphere</code>中给划分的<code>VLAN</code>的网关，作为虚拟机的<code>IP</code>下发了，<code> VLAN</code>号和<code>IP</code>地址都是固定的，导致了一次该网段下面的<code>Linux</code>服务器网络直接发生了环路。但是<code>Windows</code>集群是不受到影响的，遇到这种问题一般都不会想到会是<code>ARP</code>冲突问题，一半都是排查服务器，网络，路由，防火墙等问题，没想到<code>ARP</code>问题，但是最后给<code>VLAN</code>直接删除，但是网络还是正常能通的，这就说明了问题了。<code>ARP</code>冲突，根据<code>mac</code>地址，然后找到对应的那台服务器的，关机（或者是修改IP），然后网络恢复正常。</p>
@@ -70,7 +69,7 @@ sysctl -w net.ipv4.conf.default.rp_filter=1
 <hr />
 <h3>总结</h3>
 <p>Windows和Linux在网关IP配置上的行为差异，主要源于两者在网络栈实现和路由处理机制上的不同。Windows通过内置的检查和保护机制避免了环路问题，而Linux则更依赖用户的配置和管理能力。为了避免Linux中的环路问题，用户需要仔细检查网关配置，并采取适当的防护措施。</p>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/7"/><category term="技术"/><published>2025-01-14T08:19:43+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/6</id><title>关于我</title><updated>2025-01-19T01:48:46.735576+00:00</updated><content type="html"><![CDATA[<h3>简介</h3>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/7"/><category term="技术"/><published>2025-01-14T08:19:43+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/6</id><title>关于我</title><updated>2025-01-19T01:50:37.021696+00:00</updated><content type="html"><![CDATA[<h3>简介</h3>
 <ul>
 <li>座右铭：物来顺应 未来不迎 当时不杂 既过不恋；</li>
 <li>出生：一个土生土长的农村孩子；</li>
@@ -78,7 +77,7 @@ sysctl -w net.ipv4.conf.default.rp_filter=1
 <li>爱好：喜欢运功，喜欢技术。</li>
 </ul>
 <h4>你长得那么好看，谢谢你来看我~</h4>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/6"/><category term="About Me"/><published>2025-01-09T12:21:40+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/5</id><title>建站成功✌️</title><updated>2025-01-19T01:48:46.807692+00:00</updated><content type="html"><![CDATA[<blockquote>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/6"/><category term="About Me"/><published>2025-01-09T12:21:40+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/5</id><title>建站成功✌️</title><updated>2025-01-19T01:50:37.150666+00:00</updated><content type="html"><![CDATA[<blockquote>
 <p>谨以此篇文章作为建站纪念，感谢所有大佬的帮助，我会在文章结尾提供连接</p>
 </blockquote>
 <p> 经过自己两周的周末时间，终于是给这个通过issues写博客弄好了，前后端分离，都是通过GitHub托管的方式，聊聊一些问题：</p>
