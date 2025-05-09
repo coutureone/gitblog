@@ -4,7 +4,7 @@
 **<p align="center">用于记录一些琐碎</p>**
 ![white](https://github.com/coutureone/gitblog/blob/main/img/white.png?raw=true)
 
-![white](https://github.com/coutureone/gitblog/blob/main/img/dark.png?raw=true)
+![dark](https://github.com/coutureone/gitblog/blob/main/img/dark.png?raw=true)
 
 ## 联系方式
 - Twitter：[@coutureone](https://twitter.com/coutureone)
