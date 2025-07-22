@@ -12,11 +12,11 @@
 - RSS：[RSS Feed](https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml)
 
 ## 最近更新
+- [项目主观评分](https://github.com/coutureone/gitblog/issues/15)--2025-07-22
 - [知否](https://github.com/coutureone/gitblog/issues/14)--2025-07-11
 - [IPv6的一个小TIP](https://github.com/coutureone/gitblog/issues/13)--2025-05-14
 - [一个IP冲突场景的解决方案](https://github.com/coutureone/gitblog/issues/12)--2025-05-12
 - [Running](https://github.com/coutureone/gitblog/issues/11)--2025-05-08
-- [喝大学室友的喜酒](https://github.com/coutureone/gitblog/issues/10)--2025-02-12
 ## About Me
 - [关于我](https://github.com/coutureone/gitblog/issues/6)--2025-01-09
 - [IPv6的一个小TIP](https://github.com/coutureone/gitblog/issues/13)--2025-05-14
@@ -27,5 +27,6 @@
 - [2024从那里写呢](https://github.com/coutureone/gitblog/issues/8)--2025-01-19
 ## 杂记
 - [知否](https://github.com/coutureone/gitblog/issues/14)--2025-07-11
+- [项目主观评分](https://github.com/coutureone/gitblog/issues/15)--2025-07-22
 - [Running](https://github.com/coutureone/gitblog/issues/11)--2025-05-08
 - [喝大学室友的喜酒](https://github.com/coutureone/gitblog/issues/10)--2025-02-12
