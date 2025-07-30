@@ -12,11 +12,11 @@
 - RSS：[RSS Feed](https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml)
 
 ## 最近更新
+- [湖州](https://github.com/coutureone/gitblog/issues/17)--2025-07-30
 - [外网监控网页注意端口](https://github.com/coutureone/gitblog/issues/16)--2025-07-27
 - [项目主观评分](https://github.com/coutureone/gitblog/issues/15)--2025-07-22
 - [知否](https://github.com/coutureone/gitblog/issues/14)--2025-07-11
 - [IPv6的一个小TIP](https://github.com/coutureone/gitblog/issues/13)--2025-05-14
-- [一个IP冲突场景的解决方案](https://github.com/coutureone/gitblog/issues/12)--2025-05-12
 ## About Me
 - [关于我](https://github.com/coutureone/gitblog/issues/6)--2025-01-09
 - [外网监控网页注意端口](https://github.com/coutureone/gitblog/issues/16)--2025-07-27
@@ -26,7 +26,7 @@
 - [一不留神的网络环路](https://github.com/coutureone/gitblog/issues/7)--2025-01-14
 ## 总结
 - [2024从那里写呢](https://github.com/coutureone/gitblog/issues/8)--2025-01-19
-## 杂记
+- [湖州](https://github.com/coutureone/gitblog/issues/17)--2025-07-30
 - [知否](https://github.com/coutureone/gitblog/issues/14)--2025-07-11
 - [项目主观评分](https://github.com/coutureone/gitblog/issues/15)--2025-07-22
 - [Running](https://github.com/coutureone/gitblog/issues/11)--2025-05-08
