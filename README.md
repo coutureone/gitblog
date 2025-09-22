@@ -12,11 +12,11 @@
 - RSS：[RSS Feed](https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml)
 
 ## 最近更新
+- [mac使用IE浏览器](https://github.com/coutureone/gitblog/issues/21)--2025-09-22
 - [利用clash代理ATrust](https://github.com/coutureone/gitblog/issues/20)--2025-09-14
 - [docker网络配置](https://github.com/coutureone/gitblog/issues/19)--2025-09-13
 - [解决mac弹出关于本机的bug](https://github.com/coutureone/gitblog/issues/18)--2025-08-10
 - [湖州](https://github.com/coutureone/gitblog/issues/17)--2025-07-30
-- [外网监控网页注意端口](https://github.com/coutureone/gitblog/issues/16)--2025-07-27
 ## About Me
 - [关于我](https://github.com/coutureone/gitblog/issues/6)--2025-01-09
 - [利用clash代理ATrust](https://github.com/coutureone/gitblog/issues/20)--2025-09-14
