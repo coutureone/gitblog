@@ -1,17 +1,25 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/coutureone/gitblog</id><title>RSS feed of coutureone's gitblog</title><updated>2025-10-16T05:07:20.864290+00:00</updated><link href="https://github.com/coutureone/gitblog"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/coutureone/gitblog/issues/22</id><title>月亮在看着我</title><updated>2025-10-16T05:07:21.194505+00:00</updated><content type="html"><![CDATA[<blockquote>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/coutureone/gitblog</id><title>RSS feed of coutureone's gitblog</title><updated>2025-12-05T02:01:33.421395+00:00</updated><link href="https://github.com/coutureone/gitblog"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/coutureone/gitblog/issues/23</id><title>IPv6小记</title><updated>2025-12-05T02:01:33.758743+00:00</updated><content type="html"><![CDATA[<p> 最近在调试单位的IPv6的网络，运营商对专线的方式和普通家用方式是完全不一样的了，大多数情况，运营商给的IPv6的下发方式有两种：</p>
+<ol>
+<li>交换模式，业务地址段 IPv6网关在运营商骨干路由器上，二层透传到客户端。</li>
+<li>路由模式，业务地址段 IPv6网关在客户内部网络，运营商与客户路由器通过互联地址互联，业务地址段通过互联，静态路由下指到客户侧。</li>
+</ol>
+<p> 这两种方式都是可以打通网络的，用户侧这里配置没有问题的情况下，就不会有太大的问题，当然这里说的只是一般情况，我就遇到这个特殊的情况：</p>
+<p> 运营商给的是交换模式，这种情况在用户侧的出口防火墙配置，配置好了，但是发现就是不通，然后采取了第二种方式，用路由模式，进行配置以后，网络直接通了，IPv4和IPv6的速率可以保持一致了，测试结果如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/coutureone/gitblog@main/img/a6a6e69c0c50488231a84461b2938846.png" alt="" /></p>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/23"/><category term="技术"/><published>2025-12-05T02:01:05+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/22</id><title>月亮在看着我</title><updated>2025-12-05T02:01:33.866848+00:00</updated><content type="html"><![CDATA[<blockquote>
 <p>生前一杯茶，抵过死后万两金。</p>
 </blockquote>
 <p> 十一假期，姥姥走了，人这一生可能就是这样，两个女儿一个儿子，最后都没有赶上见老人家最后一面，这一辈子也是吃了不少苦，特别是耳朵的听力，成为我姥姥这一辈子的羁绊。</p>
 <p> 记得小时候我父亲因为车祸，我寄住于各个亲戚家里，当然在我姥姥那里待的时间是最长的，三个月时间，我差别不多60天的时间都是待在姥姥家里，姥姥很溺爱自己的孩子，那时候我和我表哥不管是有犯了什么错误，从来没有说过我们，每次去她哪里的时候都会给最好的留给孩子，上班以后每年的回家次数相对来说就少了很多，特别是今年，今年在此之前一次都还没有回过老家，记得过年走的时候，姥姥拉着我的手：“外甥，你啥时候会再来？”，我当时脱口而出，端午节就回来，姥姥笑着和我说：“好”。没想到这一走尽是成了最后一面，这一面是开心的，再见却是遗憾的...姥姥的下葬刚好赶上中秋节，我两夜几乎没有睡觉，望着天上的月亮，人有悲欢离合，月有阴晴圆缺，这不就是人生的写照吗，写到这里面的眼泪已经开始眼睛里面转动了，快要溢出，可能人生就是这样，做好当下，常回家看看。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/coutureone/gitblog@main/img/moon.jpg" alt="" /></p>
 <p> 看这月光，这是姥姥，在看着我~~~</p>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/22"/><category term="杂记"/><published>2025-10-16T05:06:53+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/21</id><title>mac使用IE浏览器</title><updated>2025-10-16T05:07:21.308982+00:00</updated><content type="html"><![CDATA[<p>打开开发者模式，使用的代码是</p>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/22"/><category term="杂记"/><published>2025-10-16T05:06:53+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/21</id><title>mac使用IE浏览器</title><updated>2025-12-05T02:01:33.979203+00:00</updated><content type="html"><![CDATA[<p>打开开发者模式，使用的代码是</p>
 <pre><code class="language-bash">Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1；WOW64; Trident/5.0）
 </code></pre>
 <p>填入到其他里面，然后在使用软件的时候进行选中即可。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/coutureone/gitblog@main/img/image-20250922120338795.png" alt="" /></p>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/21"/><category term="技术"/><published>2025-09-22T04:06:09+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/20</id><title>利用clash代理ATrust</title><updated>2025-10-16T05:07:21.416068+00:00</updated><content type="html"><![CDATA[<blockquote>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/21"/><category term="技术"/><published>2025-09-22T04:06:09+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/20</id><title>利用clash代理ATrust</title><updated>2025-12-05T02:01:34.084524+00:00</updated><content type="html"><![CDATA[<blockquote>
 <p>折腾仅仅不是为了喜欢，而是更好的实现自己的需求。</p>
 </blockquote>
 <p> 最近发现深信服<code>ATrust</code>这个软件有点变态，可能是因为网络隧道软件都需要拿去root权限，但是你拿到root权限我能理解，但是不让我关闭是什么意思，然后就开始让我产生了要给这个软件替换掉的想法，我找了很多方式好像都不能给这个软件给替换掉，既然无法替换，我就像能不能通过虚拟机的方式进行跑呢，开虚拟机也不是不可以，但是我的电脑内存只有16G,如果虚拟机开起来，看似解决问题，但是笔记本的电量疯狂的掉，于是去GitHub上面开始找解决方案，还真的有大佬给atrust这个软件打包好了docker的形式，然后就有了想法。</p>
@@ -46,7 +54,7 @@ rules:
 <p> 以上就是我内网的配置，我是按照我的实际需求进行修改的，可根据实际需求进行修改。</p>
 <p> 代理工具我是<a href="https://github.com/mihomo-party-org/clash-party">clash-party</a>，感觉还挺好用，推荐一下。</p>
 <p> 最后鸣谢这<a href="https://github.com/docker-easyconnect/docker-easyconnect">docker-easyconnect</a>、<a href="https://github.com/mihomo-party-org/clash-party">clash-party</a>这两个开源项目，以及对项目所有贡献的开发者们。</p>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/20"/><category term="技术"/><published>2025-09-14T07:24:33+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/19</id><title>docker网络配置</title><updated>2025-10-16T05:07:21.522249+00:00</updated><content type="html"><![CDATA[<p>IPv4和IPv6都开启的情况</p>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/20"/><category term="技术"/><published>2025-09-14T07:24:33+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/19</id><title>docker网络配置</title><updated>2025-12-05T02:01:34.190212+00:00</updated><content type="html"><![CDATA[<p>IPv4和IPv6都开启的情况</p>
 <pre><code class="language-json">{
   &quot;registry-mirrors&quot; : [
     &quot;https:\/\/docker.1ms.run&quot;,
@@ -71,17 +79,17 @@ rules:
   &quot;bip&quot; : &quot;172.16.0.1\/24&quot;
 }
 </code></pre>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/19"/><category term="技术"/><published>2025-09-13T01:34:03+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/18</id><title>解决mac弹出关于本机的bug</title><updated>2025-10-16T05:07:21.611576+00:00</updated><content type="html"><![CDATA[<p> 之前一直遇到这么一个问题，就是在mac下面打字的时候莫名其妙的会遇到弹窗。</p>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/19"/><category term="技术"/><published>2025-09-13T01:34:03+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/18</id><title>解决mac弹出关于本机的bug</title><updated>2025-12-05T02:01:34.296267+00:00</updated><content type="html"><![CDATA[<p> 之前一直遇到这么一个问题，就是在mac下面打字的时候莫名其妙的会遇到弹窗。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/coutureone/gitblog@main/img/image-20250810142624282.png" alt="" /></p>
 <p> 弹窗就是如上图所示，一直没有找到解决问题的原因，然后我去<a href="https://v2ex.com/t/1151012?p=1#reply12">v2ex</a>上面发了一篇贴子，咨询关于这个问题，最后终于得到解决方式，就是 <code>Bartender 5</code> 这个软件的问题，升级到最新版本或者是删除问题就解决了。</p>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/18"/><category term="杂记"/><published>2025-08-10T06:48:38+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/17</id><title>湖州</title><updated>2025-10-16T05:07:21.736114+00:00</updated><content type="html"><![CDATA[<p> 从老家到杭州，每次都是路过湖州，但是没有正真的来玩过，这次好不容易来湖州玩几天，没想到遇到了台风天气，前两天还行，去了莲花庄，双林古镇，参观了《典籍里的中国》陈列馆，最后还去了湖州古镇，看了《最美太湖》的表演，水上打铁花，以及最后的烟花，因为跟团的，整个过程感觉就是快节奏的，总体来说还是挺好玩的，对于这次的旅行对于内心来说是五味杂陈吧（后面的博客再续），其他的我觉得没有什么特别好记录的，放一些照片在上面吧。</p>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/18"/><category term="杂记"/><published>2025-08-10T06:48:38+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/17</id><title>湖州</title><updated>2025-12-05T02:01:34.427363+00:00</updated><content type="html"><![CDATA[<p> 从老家到杭州，每次都是路过湖州，但是没有正真的来玩过，这次好不容易来湖州玩几天，没想到遇到了台风天气，前两天还行，去了莲花庄，双林古镇，参观了《典籍里的中国》陈列馆，最后还去了湖州古镇，看了《最美太湖》的表演，水上打铁花，以及最后的烟花，因为跟团的，整个过程感觉就是快节奏的，总体来说还是挺好玩的，对于这次的旅行对于内心来说是五味杂陈吧（后面的博客再续），其他的我觉得没有什么特别好记录的，放一些照片在上面吧。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/coutureone/gitblog@main/img/8d08df258d3824e683e1481f68ee6a5d.jpg" alt="" /></p>
 <p><img src="https://cdn.jsdelivr.net/gh/coutureone/gitblog@main/img/ab58e93e4c73d76e6f67a16d56fc950d.jpg" alt="" /></p>
 <p><img src="https://cdn.jsdelivr.net/gh/coutureone/gitblog@main/img/d3e96df3419512aabbe039e594d8b780.jpg" alt="" /></p>
 <p><img src="https://cdn.jsdelivr.net/gh/coutureone/gitblog@main/img/277b5e4704d5befa46b2668491262fd7.jpg" alt="" /></p>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/17"/><category term="杂记"/><published>2025-07-30T01:49:29+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/16</id><title>外网监控网页注意端口</title><updated>2025-10-16T05:07:21.830101+00:00</updated><content type="html"><![CDATA[<p>遇到一个监控网站一直发短信的问题，一会回复一会儿正常，但是这个网站不管是内网还是是外网打开都是正常的，然后进入网站的监控平台一看，<a href="http://xxx.com">http://xxx.com</a> 这样看上去好像也是没啥问题，但是网站本身为了安全是走了433端口，没有开80，所以要在监控网站的平台上需要修改成 <a href="https://xxx.com">https://xxx.com</a> 然后就收到网站恢复正常的通知，bug解决了。</p>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/16"/><category term="技术"/><published>2025-07-27T06:43:26+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/15</id><title>项目主观评分</title><updated>2025-10-16T05:07:21.937914+00:00</updated><content type="html"><![CDATA[<p> 关于公开项目评标在主观分上，尽可能需要设置评分标准的人多设置几个，避免选项只有0和其他，否则打分是要写说明的。</p>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/15"/><category term="随笔"/><published>2025-07-22T10:15:35+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/14</id><title>知否</title><updated>2025-10-16T05:07:22.052276+00:00</updated><content type="html"><![CDATA[<p>​	好久没有写博客了， 最近这段时间的我去干嘛了呢，当然是去找我人生中的另一半去了，在这段日子里面喜怒哀愁各种都有吧，但是在这其中让我感受最深的是一种特别的<code>illness</code>，<code>depressive disorder（抑郁症）</code>。</p>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/17"/><category term="杂记"/><published>2025-07-30T01:49:29+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/16</id><title>外网监控网页注意端口</title><updated>2025-12-05T02:01:34.541529+00:00</updated><content type="html"><![CDATA[<p>遇到一个监控网站一直发短信的问题，一会回复一会儿正常，但是这个网站不管是内网还是是外网打开都是正常的，然后进入网站的监控平台一看，<a href="http://xxx.com">http://xxx.com</a> 这样看上去好像也是没啥问题，但是网站本身为了安全是走了433端口，没有开80，所以要在监控网站的平台上需要修改成 <a href="https://xxx.com">https://xxx.com</a> 然后就收到网站恢复正常的通知，bug解决了。</p>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/16"/><category term="技术"/><published>2025-07-27T06:43:26+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/15</id><title>项目主观评分</title><updated>2025-12-05T02:01:34.673584+00:00</updated><content type="html"><![CDATA[<p> 关于公开项目评标在主观分上，尽可能需要设置评分标准的人多设置几个，避免选项只有0和其他，否则打分是要写说明的。</p>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/15"/><category term="随笔"/><published>2025-07-22T10:15:35+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/14</id><title>知否</title><updated>2025-12-05T02:01:34.780019+00:00</updated><content type="html"><![CDATA[<p>​	好久没有写博客了， 最近这段时间的我去干嘛了呢，当然是去找我人生中的另一半去了，在这段日子里面喜怒哀愁各种都有吧，但是在这其中让我感受最深的是一种特别的<code>illness</code>，<code>depressive disorder（抑郁症）</code>。</p>
 <p>​	对我个人来说，我在此之前也有接触过抑郁症患者，当时的接触让我感觉好像和我们普通人没有区别，但是当我深入接触以后，发现一切没有这么简单，我对于抑郁症患者是表示同情的，因为我查阅了大量的书籍和数据，很多抑郁症的患者都是和童年以及当下的生活状态息息相关，抑郁症当然也有遗传的因素在，但是相对来说是偏少的。经过一段时间的接触，我甚至去想考一个心里咨询师的想法，现在越来越多的学校也好，公益活动活动等，都会设立一个心里咨询站，抑郁症我个人觉得是从心里-&gt;精神-&gt;生理，这一系列相互影响的，可以理解为一个<code>CBT</code>模型，行为、思维、感受三者的一个循环。</p>
 <pre><code class="language-mermaid">graph LR
     A[外部事件/触发] --&gt; B[行为]
@@ -116,7 +124,7 @@ rules:
 <p>​	心灵就像是大海一样，蔚蓝浩瀚和波涛汹涌，希望每个人都能早日战胜自己的心魔，走出困境。</p>
 <p>​															杭州.萧山</p>
 <p>​															2025.7.11 中午</p>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/14"/><category term="杂记"/><published>2025-07-11T05:43:04+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/13</id><title>IPv6的一个小TIP</title><updated>2025-10-16T05:07:22.173616+00:00</updated><content type="html"><![CDATA[<blockquote>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/14"/><category term="杂记"/><published>2025-07-11T05:43:04+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/13</id><title>IPv6的一个小TIP</title><updated>2025-12-05T02:01:34.896544+00:00</updated><content type="html"><![CDATA[<blockquote>
 <p>纸上得来终觉浅，绝知此事要躬行</p>
 </blockquote>
 <p> 今天和一个工程师探讨了一个IPv6的问题，IPV6对于设备分为两种的状态：</p>
@@ -128,7 +136,7 @@ rules:
 <p> 无状态：安卓和苹果都是支持的，隔一段时间IPv6地址就会变。</p>
 <p> 有状态可以理解为固定IP地址，无状态可以理解为不固定IP地址，IPv6地址会变动。</p>
 <p> 如果想所有设备出局都走IPv6，可以无线做IPV4隧道，在AC做4 to 6就可以。</p>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/13"/><category term="技术"/><published>2025-05-14T13:45:54+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/12</id><title>一个IP冲突场景的解决方案</title><updated>2025-10-16T05:07:22.272847+00:00</updated><content type="html"><![CDATA[<blockquote>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/13"/><category term="技术"/><published>2025-05-14T13:45:54+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/12</id><title>一个IP冲突场景的解决方案</title><updated>2025-12-05T02:01:35.010596+00:00</updated><content type="html"><![CDATA[<blockquote>
 <p>在生产场景中Vcenter遇到到一个因为docker内网地址和园区内网地址冲突了（当时规划的有问题），然后便有了解决方案和触发方式。</p>
 </blockquote>
 <h3><strong>1. Docker 业务与园区网络会冲突吗？</strong></h3>
@@ -256,13 +264,13 @@ docker run --rm alpine ping &lt;VM2容器IP&gt;
 <li><strong>与校园网的冲突</strong>：只要 Docker 不使用校园网的 IP 段，默认不会冲突。</li>
 <li><strong>虚拟机间冲突</strong>：仅在虚拟机互联且 Docker 使用相同 IP 段时可能发生。通过隔离网络或分配不同网段即可规避。</li>
 </ul>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/12"/><category term="技术"/><published>2025-05-12T10:47:05+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/11</id><title>Running</title><updated>2025-10-16T05:07:22.378507+00:00</updated><content type="html"><![CDATA[<p> 中午休息的时候没什么事情，对自己的跑步页面进行更新，与其说是更新，更不如说直接拿着大佬更新好的代码，然后自己进行CV，这样进行更新，今年的自己的目标是1000公里，截止到目前，我跑了不到100公里，距离自己的目标还是相差很远，
+]]></content><link href="https://github.com/coutureone/gitblog/issues/12"/><category term="技术"/><published>2025-05-12T10:47:05+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/11</id><title>Running</title><updated>2025-12-05T02:01:35.130998+00:00</updated><content type="html"><![CDATA[<p> 中午休息的时候没什么事情，对自己的跑步页面进行更新，与其说是更新，更不如说直接拿着大佬更新好的代码，然后自己进行CV，这样进行更新，今年的自己的目标是1000公里，截止到目前，我跑了不到100公里，距离自己的目标还是相差很远，
 <img src="https://github.com/user-attachments/assets/fa4ae24e-bc1e-4882-9bf9-98d25ec25daf" alt="Image" />
  感觉自己现在是堕落了，没有一个很强的意志力去坚持，前几天去爬山，明显感觉自己的腿部力量和核心力量在下降，髂胫束开始有些疼，之前我跑了500公里都没有疼过，没想到爬山还没有爬完就开始疼了。终究还是自己的肌肉群下去了，肌肉就是这样用进废退罢了。
 <img src="https://github.com/user-attachments/assets/ba58e752-f76f-4614-96fd-85de5739bd23" alt="Image" />
  自己确实也要拾起来了，早睡早起进行跑步，或者是晚上进行跑步，多种方式，但是终究还是需要自己去坚持的，希望有一天我能跑到10000公里，那一天很快，也很长。
  烦心的事情自己就不去想了，随遇而安~</p>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/11"/><category term="随笔"/><published>2025-05-08T11:14:33+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/10</id><title>喝大学室友的喜酒</title><updated>2025-10-16T05:07:22.473270+00:00</updated><content type="html"><![CDATA[<blockquote>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/11"/><category term="随笔"/><published>2025-05-08T11:14:33+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/10</id><title>喝大学室友的喜酒</title><updated>2025-12-05T02:01:35.235404+00:00</updated><content type="html"><![CDATA[<blockquote>
 <p>男人的一生情谊有三种：同过窗，扛过枪，嫖过娼，当然我与室友的情谊就是第一种。</p>
 </blockquote>
 <p>​	我的大学室友是六个人，当时分寝室的室友是按照专业分的，后面我们进行班级划分的时候，我们是按照寝室进行划分的，所以大学四年我们都在同一个寝室。大家的关系也都玩的也很好，离校前夕，彻夜畅谈，当时主要的话题就是我们这些人谁会第一个结婚，都认为自己肯定不是第一个，没有想到一别就是三年，他去年这个时候相亲，今年结婚了。</p>
@@ -271,7 +279,7 @@ docker run --rm alpine ping &lt;VM2容器IP&gt;
 <p>​	正月十二，早上九点我们准时从他老家进行出发接亲，接亲开门也没有那么复杂，“只要红包足够，一切都好说”，当然是开玩笑的，没有一些小插曲，就没有意思了，进门就是做游戏，整个过程还是挺有意思的，然后就是回酒店开始婚礼仪式，这些东西感觉其他地区可能都是大同小异了，有一个陋习（或者是习俗）我是理解不了一点，就是往脸上涂鞋油，这个是什么奇怪的习俗我是第一次见，真的是有些理解不了。整个过程就是欢乐喜庆的。下午吃过席以后，就不让室友送了，其他的同学一起直接就回新乡了，有的坐火车去郑州，我是第二天早上到杭州的高铁，我留下去新乡的胖东来转了一圈，发现胖东来也没有网上说的那么好，主要是人太多了，多到夸张。就简单买了两个他们的特产月饼走匆匆离开了，然后简单吃了一碗烩面，回酒店休息了。第二天一大早回杭州的高铁，至此我的这次喝喜酒之旅结束~</p>
 <p>​	自己也没有多么华丽的文笔，就是简单的记录，结婚算是人的一生最重要的事情之一，愿大家都能找到彼此的幸福！</p>
 <p>​		</p>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/10"/><category term="随笔"/><published>2025-02-12T07:02:31+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/9</id><title>关于我的家庭组网</title><updated>2025-10-16T05:07:22.598229+00:00</updated><content type="html"><![CDATA[<h1>关于我的家庭组网</h1>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/10"/><category term="随笔"/><published>2025-02-12T07:02:31+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/9</id><title>关于我的家庭组网</title><updated>2025-12-05T02:01:35.333735+00:00</updated><content type="html"><![CDATA[<h1>关于我的家庭组网</h1>
 <p>​	最近放假回老家，发现网络一直有问题，当然在我写这篇博客的时候还是有问题没有解决。</p>
 <p>​	一开始网路架构是正常的架构：入户光纤-&gt;光猫-&gt;路由器，路由器做AP用，组成了有线mesh，分别是小米的<code>AX1800</code>和<code>AX6000</code>，但是我发现不管是手机<code>ping</code>内网还是电脑<code>ping</code>内网，都是会发生跳<code>ping</code>，非常奇怪，然后我就按照自己的思路先自己排查问题了，网线和水晶头没问题，光衰也是正常，有线和无线都跳<code>ping</code>，按照各位网络大佬的指点，我开始重新组网络。</p>
 <p>​	首先给光猫改成桥接，然后下面加了个软路由，通过软路由进行拨号上网。</p>
@@ -279,7 +287,7 @@ docker run --rm alpine ping &lt;VM2容器IP&gt;
 <p>​	最后进行测试，有线网络电脑<code>ping</code>是正常的，不跳<code>ping</code>，但是手机和电脑无线还是跳<code>ping</code>，我尝试修改路由器的信道，但是发现问题还是没有解决。</p>
 <p><img src="https://s3.qjqq.cn/50/6791a43944855.webp%21color" alt="" /></p>
 <p>​	图中就是无线<code>ping</code>的问题，内网发现还是严重跳<code>ping</code>，不知道各位大佬有啥思路和想法让我去排查问题，目前就是能用就行，也没找到这个问题到底是什么产生的，我怀疑是路由器的AP模式问题。</p>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/9"/><category term="技术"/><published>2025-01-23T02:09:43+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/8</id><title>2024从那里写呢</title><updated>2025-10-16T05:07:22.688380+00:00</updated><content type="html"><![CDATA[<blockquote>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/9"/><category term="技术"/><published>2025-01-23T02:09:43+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/8</id><title>2024从那里写呢</title><updated>2025-12-05T02:01:35.435423+00:00</updated><content type="html"><![CDATA[<blockquote>
 <p>光阴似箭催人老，日月如梭趱少年。</p>
 </blockquote>
 <p>​	恍恍惚惚又是一年，2024好像自己做了很多事情，又好像什么都没做，工作，生活，学习...这一年自己经历太多了，身边亲人的离世让我真正感受到了，没有什么比健康更重要，我也开始给跑步拾起来，看这自己大学时候的跑步记录，想要达到自己的当时配速和心率比，可能我需要跑1000公里都不一定能回去了，当然目前也是跑了将近600公里，和那时候的自己的心肺功能相差还是很多，初心不忘，贵在坚持，以健康为主。</p>
@@ -289,7 +297,7 @@ docker run --rm alpine ping &lt;VM2容器IP&gt;
 <p>​	说到这里，深夜，我应该是要开始收拾东西了，放假了，有钱没钱回家过年，开始收拾东西，准备回家了。</p>
 <h4>感谢</h4>
 <p>@0x676e67 @yihong0618 @WuLongMiTaoLaiYiDa @mrasong @isYangs @superleeyom @everfu</p>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/8"/><category term="总结"/><published>2025-01-19T01:48:17+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/7</id><title>一不留神的网络环路</title><updated>2025-10-16T05:07:22.783493+00:00</updated><content type="html"><![CDATA[<blockquote>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/8"/><category term="总结"/><published>2025-01-19T01:48:17+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/7</id><title>一不留神的网络环路</title><updated>2025-12-05T02:01:35.544848+00:00</updated><content type="html"><![CDATA[<blockquote>
 <p>一个小小的操作失误，引发的一次生产事故</p>
 </blockquote>
 <p> 关于在<code>vsphere</code>中给划分的<code>VLAN</code>的网关，作为虚拟机的<code>IP</code>下发了，<code> VLAN</code>号和<code>IP</code>地址都是固定的，导致了一次该网段下面的<code>Linux</code>服务器网络直接发生了环路。但是<code>Windows</code>集群是不受到影响的，遇到这种问题一般都不会想到会是<code>ARP</code>冲突问题，一半都是排查服务器，网络，路由，防火墙等问题，没想到<code>ARP</code>问题，但是最后给<code>VLAN</code>直接删除，但是网络还是正常能通的，这就说明了问题了。<code>ARP</code>冲突，根据<code>mac</code>地址，然后找到对应的那台服务器的，关机（或者是修改IP），然后网络恢复正常。</p>
@@ -349,7 +357,7 @@ sysctl -w net.ipv4.conf.default.rp_filter=1
 <hr />
 <h3>总结</h3>
 <p>Windows和Linux在网关IP配置上的行为差异，主要源于两者在网络栈实现和路由处理机制上的不同。Windows通过内置的检查和保护机制避免了环路问题，而Linux则更依赖用户的配置和管理能力。为了避免Linux中的环路问题，用户需要仔细检查网关配置，并采取适当的防护措施。</p>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/7"/><category term="技术"/><published>2025-01-14T08:19:43+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/6</id><title>关于我</title><updated>2025-10-16T05:07:22.886635+00:00</updated><content type="html"><![CDATA[<h3>简介</h3>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/7"/><category term="技术"/><published>2025-01-14T08:19:43+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/6</id><title>关于我</title><updated>2025-12-05T02:01:35.645586+00:00</updated><content type="html"><![CDATA[<h3>简介</h3>
 <ul>
 <li>座右铭：物来顺应 未来不迎 当时不杂 既过不恋；</li>
 <li>出生：一个土生土长的农村孩子；</li>
@@ -357,7 +365,7 @@ sysctl -w net.ipv4.conf.default.rp_filter=1
 <li>爱好：喜欢运功，喜欢技术。</li>
 </ul>
 <h4>你长得那么好看，谢谢你来看我~</h4>
-]]></content><link href="https://github.com/coutureone/gitblog/issues/6"/><category term="About Me"/><published>2025-01-09T12:21:40+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/5</id><title>建站成功✌️</title><updated>2025-10-16T05:07:22.992076+00:00</updated><content type="html"><![CDATA[<blockquote>
+]]></content><link href="https://github.com/coutureone/gitblog/issues/6"/><category term="About Me"/><published>2025-01-09T12:21:40+00:00</published></entry><entry><id>https://github.com/coutureone/gitblog/issues/5</id><title>建站成功✌️</title><updated>2025-12-05T02:01:35.763276+00:00</updated><content type="html"><![CDATA[<blockquote>
 <p>谨以此篇文章作为建站纪念，感谢所有大佬的帮助，我会在文章结尾提供连接</p>
 </blockquote>
 <p> 经过自己两周的周末时间，终于是给这个通过issues写博客弄好了，前后端分离，都是通过GitHub托管的方式，聊聊一些问题：</p>
