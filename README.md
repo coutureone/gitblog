@@ -8,7 +8,7 @@
 - Twitter：[@coutureone](https://twitter.com/coutureone)
 - Telegram：[@coutureone](https://t.me/coutureone)
 - Email：[couturecome@gmail.com](mailto:couturecome@gmail.@163.com)
-- Blog：[https://blog.coutures.top](https://blog.coutures.top)
+- Blog：[https://blog.coutures.top](https://blog.xcouture.cc)
 - RSS：[RSS Feed](https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml)
 
 ## 最近更新
@@ -41,3 +41,4 @@
 - [项目主观评分](https://github.com/coutureone/gitblog/issues/15)--2025-07-22
 - [Running](https://github.com/coutureone/gitblog/issues/11)--2025-05-08
 - [喝大学室友的喜酒](https://github.com/coutureone/gitblog/issues/10)--2025-02-12
+x
