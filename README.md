@@ -12,11 +12,11 @@
 - RSS：[RSS Feed](https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml)
 
 ## 最近更新
+- [告别](https://github.com/coutureone/gitblog/issues/25)--2025-12-23
 - [Zstack BUG](https://github.com/coutureone/gitblog/issues/24)--2025-12-09
 - [IPv6小记](https://github.com/coutureone/gitblog/issues/23)--2025-12-05
 - [月亮在看着我](https://github.com/coutureone/gitblog/issues/22)--2025-10-16
 - [mac使用IE浏览器](https://github.com/coutureone/gitblog/issues/21)--2025-09-22
-- [利用clash代理ATrust](https://github.com/coutureone/gitblog/issues/20)--2025-09-14
 ## About Me
 - [关于我](https://github.com/coutureone/gitblog/issues/6)--2025-01-09
 - [Zstack BUG](https://github.com/coutureone/gitblog/issues/24)--2025-12-09
@@ -39,6 +39,7 @@
 - [解决mac弹出关于本机的bug](https://github.com/coutureone/gitblog/issues/18)--2025-08-10
 - [湖州](https://github.com/coutureone/gitblog/issues/17)--2025-07-30
 - [知否](https://github.com/coutureone/gitblog/issues/14)--2025-07-11
+- [告别](https://github.com/coutureone/gitblog/issues/25)--2025-12-23
 - [项目主观评分](https://github.com/coutureone/gitblog/issues/15)--2025-07-22
 - [Running](https://github.com/coutureone/gitblog/issues/11)--2025-05-08
 - [喝大学室友的喜酒](https://github.com/coutureone/gitblog/issues/10)--2025-02-12
