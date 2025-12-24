@@ -8,7 +8,7 @@
 - Twitter：[@coutureone](https://twitter.com/coutureone)
 - Telegram：[@coutureone](https://t.me/coutureone)
 - Email：[couturecome@gmail.com](mailto:couturecome@gmail.@163.com)
-- Blog：[https://blog.coutures.top](https://blog.coutures.top)
+- Blog：[https://blog.xcouture.cc](https://blog.xcouture.cc)
 - RSS：[RSS Feed](https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml)
 
 ## 最近更新
