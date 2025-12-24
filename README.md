@@ -19,6 +19,7 @@
 - [月亮在看着我](https://github.com/coutureone/gitblog/issues/22)--2025-10-16
 ## About Me
 - [关于我](https://github.com/coutureone/gitblog/issues/6)--2025-01-09
+## 技术
 - [Zstack BUG](https://github.com/coutureone/gitblog/issues/24)--2025-12-09
 - [IPv6小记](https://github.com/coutureone/gitblog/issues/23)--2025-12-05
 - [mac使用IE浏览器](https://github.com/coutureone/gitblog/issues/21)--2025-09-22
@@ -33,7 +34,7 @@
 - [一不留神的网络环路](https://github.com/coutureone/gitblog/issues/7)--2025-01-14
 </details>
 
-## 总结
+## 杂谈
 - [2024从那里写呢](https://github.com/coutureone/gitblog/issues/8)--2025-01-19
 - [月亮在看着我](https://github.com/coutureone/gitblog/issues/22)--2025-10-16
 - [解决mac弹出关于本机的bug](https://github.com/coutureone/gitblog/issues/18)--2025-08-10
