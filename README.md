@@ -8,18 +8,17 @@
 - Twitter：[@coutureone](https://twitter.com/coutureone)
 - Telegram：[@coutureone](https://t.me/coutureone)
 - Email：[couturecome@gmail.com](mailto:couturecome@gmail.@163.com)
-- Blog：[https://blog.xcouture.cc](https://blog.xcouture.cc)
+- Blog：[https://blog.coutures.top](https://blog.coutures.top)
 - RSS：[RSS Feed](https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml)
 
 ## 最近更新
+- [7年再聚](https://github.com/coutureone/gitblog/issues/27)--2025-12-28
 - [明年今日](https://github.com/coutureone/gitblog/issues/26)--2025-12-24
 - [告别](https://github.com/coutureone/gitblog/issues/25)--2025-12-23
 - [Zstack BUG](https://github.com/coutureone/gitblog/issues/24)--2025-12-09
 - [IPv6小记](https://github.com/coutureone/gitblog/issues/23)--2025-12-05
-- [月亮在看着我](https://github.com/coutureone/gitblog/issues/22)--2025-10-16
 ## About Me
 - [关于我](https://github.com/coutureone/gitblog/issues/6)--2025-01-09
-## 技术
 - [Zstack BUG](https://github.com/coutureone/gitblog/issues/24)--2025-12-09
 - [IPv6小记](https://github.com/coutureone/gitblog/issues/23)--2025-12-05
 - [mac使用IE浏览器](https://github.com/coutureone/gitblog/issues/21)--2025-09-22
@@ -34,12 +33,14 @@
 - [一不留神的网络环路](https://github.com/coutureone/gitblog/issues/7)--2025-01-14
 </details>
 
-## 杂谈
+## 总结
 - [2024从那里写呢](https://github.com/coutureone/gitblog/issues/8)--2025-01-19
+- [7年再聚](https://github.com/coutureone/gitblog/issues/27)--2025-12-28
 - [月亮在看着我](https://github.com/coutureone/gitblog/issues/22)--2025-10-16
 - [解决mac弹出关于本机的bug](https://github.com/coutureone/gitblog/issues/18)--2025-08-10
 - [湖州](https://github.com/coutureone/gitblog/issues/17)--2025-07-30
 - [知否](https://github.com/coutureone/gitblog/issues/14)--2025-07-11
+- [明年今日](https://github.com/coutureone/gitblog/issues/26)--2025-12-24
 - [告别](https://github.com/coutureone/gitblog/issues/25)--2025-12-23
 - [项目主观评分](https://github.com/coutureone/gitblog/issues/15)--2025-07-22
 - [Running](https://github.com/coutureone/gitblog/issues/11)--2025-05-08
