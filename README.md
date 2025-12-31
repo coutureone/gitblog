@@ -12,11 +12,13 @@
 - RSS：[RSS Feed](https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml)
 
 ## 最近更新
+- [再见2025,你好2026](https://github.com/coutureone/gitblog/issues/28)--2025-12-31
 - [7年再聚](https://github.com/coutureone/gitblog/issues/27)--2025-12-28
 - [明年今日](https://github.com/coutureone/gitblog/issues/26)--2025-12-24
 - [告别](https://github.com/coutureone/gitblog/issues/25)--2025-12-23
 - [Zstack BUG](https://github.com/coutureone/gitblog/issues/24)--2025-12-09
-- [IPv6小记](https://github.com/coutureone/gitblog/issues/23)--2025-12-05
+## 2025
+- [再见2025,你好2026](https://github.com/coutureone/gitblog/issues/28)--2025-12-31
 ## About Me
 - [关于我](https://github.com/coutureone/gitblog/issues/6)--2025-01-09
 - [Zstack BUG](https://github.com/coutureone/gitblog/issues/24)--2025-12-09
@@ -33,7 +35,7 @@
 - [一不留神的网络环路](https://github.com/coutureone/gitblog/issues/7)--2025-01-14
 </details>
 
-## 总结
+- [再见2025,你好2026](https://github.com/coutureone/gitblog/issues/28)--2025-12-31
 - [2024从那里写呢](https://github.com/coutureone/gitblog/issues/8)--2025-01-19
 - [7年再聚](https://github.com/coutureone/gitblog/issues/27)--2025-12-28
 - [月亮在看着我](https://github.com/coutureone/gitblog/issues/22)--2025-10-16
