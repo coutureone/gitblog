@@ -35,7 +35,7 @@
 - [一不留神的网络环路](https://github.com/coutureone/gitblog/issues/7)--2025-01-14
 </details>
 
-- [再见2025,你好2026](https://github.com/coutureone/gitblog/issues/28)--2025-12-31
+## 总结
 - [2024从那里写呢](https://github.com/coutureone/gitblog/issues/8)--2025-01-19
 - [7年再聚](https://github.com/coutureone/gitblog/issues/27)--2025-12-28
 - [月亮在看着我](https://github.com/coutureone/gitblog/issues/22)--2025-10-16
