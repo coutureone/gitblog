@@ -12,22 +12,23 @@
 - RSS：[RSS Feed](https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml)
 
 ## 最近更新
+- [使用Gemini3 Pro优化苹果终端索引加载速度](https://github.com/coutureone/gitblog/issues/29)--2026-01-10
 - [再见2025,你好2026](https://github.com/coutureone/gitblog/issues/28)--2025-12-31
 - [7年再聚](https://github.com/coutureone/gitblog/issues/27)--2025-12-28
 - [明年今日](https://github.com/coutureone/gitblog/issues/26)--2025-12-24
-- [告别](https://github.com/coutureone/gitblog/issues/25)--2025-12-23
 - [Zstack BUG](https://github.com/coutureone/gitblog/issues/24)--2025-12-09
 ## 2025
 - [再见2025,你好2026](https://github.com/coutureone/gitblog/issues/28)--2025-12-31
 ## About Me
 - [关于我](https://github.com/coutureone/gitblog/issues/6)--2025-01-09
+- [使用Gemini3 Pro优化苹果终端索引加载速度](https://github.com/coutureone/gitblog/issues/29)--2026-01-10
 - [Zstack BUG](https://github.com/coutureone/gitblog/issues/24)--2025-12-09
 - [IPv6小记](https://github.com/coutureone/gitblog/issues/23)--2025-12-05
 - [mac使用IE浏览器](https://github.com/coutureone/gitblog/issues/21)--2025-09-22
 - [利用clash代理ATrust](https://github.com/coutureone/gitblog/issues/20)--2025-09-14
-- [docker网络配置](https://github.com/coutureone/gitblog/issues/19)--2025-09-13
 <details><summary>显示更多</summary>
 
+- [docker网络配置](https://github.com/coutureone/gitblog/issues/19)--2025-09-13
 - [外网监控网页注意端口](https://github.com/coutureone/gitblog/issues/16)--2025-07-27
 - [IPv6的一个小TIP](https://github.com/coutureone/gitblog/issues/13)--2025-05-14
 - [一个IP冲突场景的解决方案](https://github.com/coutureone/gitblog/issues/12)--2025-05-12
@@ -43,7 +44,6 @@
 - [湖州](https://github.com/coutureone/gitblog/issues/17)--2025-07-30
 - [知否](https://github.com/coutureone/gitblog/issues/14)--2025-07-11
 - [明年今日](https://github.com/coutureone/gitblog/issues/26)--2025-12-24
-- [告别](https://github.com/coutureone/gitblog/issues/25)--2025-12-23
 - [项目主观评分](https://github.com/coutureone/gitblog/issues/15)--2025-07-22
 - [Running](https://github.com/coutureone/gitblog/issues/11)--2025-05-08
 - [喝大学室友的喜酒](https://github.com/coutureone/gitblog/issues/10)--2025-02-12
