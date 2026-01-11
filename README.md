@@ -12,11 +12,11 @@
 - RSS：[RSS Feed](https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml)
 
 ## 最近更新
+- [西湖](https://github.com/coutureone/gitblog/issues/30)--2026-01-11
 - [使用Gemini3 Pro优化苹果终端索引加载速度](https://github.com/coutureone/gitblog/issues/29)--2026-01-10
 - [再见2025,你好2026](https://github.com/coutureone/gitblog/issues/28)--2025-12-31
 - [7年再聚](https://github.com/coutureone/gitblog/issues/27)--2025-12-28
 - [明年今日](https://github.com/coutureone/gitblog/issues/26)--2025-12-24
-- [Zstack BUG](https://github.com/coutureone/gitblog/issues/24)--2025-12-09
 ## 2025
 - [再见2025,你好2026](https://github.com/coutureone/gitblog/issues/28)--2025-12-31
 ## About Me
@@ -43,6 +43,7 @@
 - [解决mac弹出关于本机的bug](https://github.com/coutureone/gitblog/issues/18)--2025-08-10
 - [湖州](https://github.com/coutureone/gitblog/issues/17)--2025-07-30
 - [知否](https://github.com/coutureone/gitblog/issues/14)--2025-07-11
+- [西湖](https://github.com/coutureone/gitblog/issues/30)--2026-01-11
 - [明年今日](https://github.com/coutureone/gitblog/issues/26)--2025-12-24
 - [项目主观评分](https://github.com/coutureone/gitblog/issues/15)--2025-07-22
 - [Running](https://github.com/coutureone/gitblog/issues/11)--2025-05-08
