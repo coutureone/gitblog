@@ -8,15 +8,15 @@
 - Twitter：[@coutureone](https://twitter.com/coutureone)
 - Telegram：[@coutureone](https://t.me/coutureone)
 - Email：[couturecome@gmail.com](mailto:couturecome@gmail.@163.com)
-- Blog：[https://blog.xcouture.cc](https://blog.xcoutures.cc)
+- Blog：[https://blog.coutures.top](https://blog.coutures.top)
 - RSS：[RSS Feed](https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml)
 
 ## 最近更新
+- [遵从本心](https://github.com/coutureone/gitblog/issues/32)--2026-01-19
 - [抽奖？又是陪跑的一年！](https://github.com/coutureone/gitblog/issues/31)--2026-01-15
 - [西湖](https://github.com/coutureone/gitblog/issues/30)--2026-01-11
 - [使用Gemini3 Pro优化苹果终端索引加载速度](https://github.com/coutureone/gitblog/issues/29)--2026-01-10
 - [再见2025,你好2026](https://github.com/coutureone/gitblog/issues/28)--2025-12-31
-- [7年再聚](https://github.com/coutureone/gitblog/issues/27)--2025-12-28
 ## 2025
 - [再见2025,你好2026](https://github.com/coutureone/gitblog/issues/28)--2025-12-31
 ## About Me
