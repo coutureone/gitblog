@@ -12,11 +12,11 @@
 - RSS：[RSS Feed](https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml)
 
 ## 最近更新
+- [再见，再也不见，祝好](https://github.com/coutureone/gitblog/issues/33)--2026-01-25
 - [遵从本心](https://github.com/coutureone/gitblog/issues/32)--2026-01-19
 - [抽奖？又是陪跑的一年！](https://github.com/coutureone/gitblog/issues/31)--2026-01-15
 - [西湖](https://github.com/coutureone/gitblog/issues/30)--2026-01-11
 - [使用Gemini3 Pro优化苹果终端索引加载速度](https://github.com/coutureone/gitblog/issues/29)--2026-01-10
-- [再见2025,你好2026](https://github.com/coutureone/gitblog/issues/28)--2025-12-31
 ## 2025
 - [再见2025,你好2026](https://github.com/coutureone/gitblog/issues/28)--2025-12-31
 ## About Me
@@ -48,8 +48,14 @@
 - [知否](https://github.com/coutureone/gitblog/issues/14)--2025-07-11
 </details>
 
+- [再见，再也不见，祝好](https://github.com/coutureone/gitblog/issues/33)--2026-01-25
+- [遵从本心](https://github.com/coutureone/gitblog/issues/32)--2026-01-19
 - [西湖](https://github.com/coutureone/gitblog/issues/30)--2026-01-11
 - [明年今日](https://github.com/coutureone/gitblog/issues/26)--2025-12-24
 - [项目主观评分](https://github.com/coutureone/gitblog/issues/15)--2025-07-22
+<details><summary>显示更多</summary>
+
 - [Running](https://github.com/coutureone/gitblog/issues/11)--2025-05-08
 - [喝大学室友的喜酒](https://github.com/coutureone/gitblog/issues/10)--2025-02-12
+</details>
+
