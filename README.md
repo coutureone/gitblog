@@ -12,7 +12,7 @@
 - RSS：[RSS Feed](https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml)
 
 ## 最近更新
-- [再见，再也不见，祝好](https://github.com/coutureone/gitblog/issues/33)--2026-01-25
+- [近况](https://github.com/coutureone/gitblog/issues/34)--2026-02-13
 - [遵从本心](https://github.com/coutureone/gitblog/issues/32)--2026-01-19
 - [抽奖？又是陪跑的一年！](https://github.com/coutureone/gitblog/issues/31)--2026-01-15
 - [西湖](https://github.com/coutureone/gitblog/issues/30)--2026-01-11
@@ -48,7 +48,7 @@
 - [知否](https://github.com/coutureone/gitblog/issues/14)--2025-07-11
 </details>
 
-- [再见，再也不见，祝好](https://github.com/coutureone/gitblog/issues/33)--2026-01-25
+- [近况](https://github.com/coutureone/gitblog/issues/34)--2026-02-13
 - [遵从本心](https://github.com/coutureone/gitblog/issues/32)--2026-01-19
 - [西湖](https://github.com/coutureone/gitblog/issues/30)--2026-01-11
 - [明年今日](https://github.com/coutureone/gitblog/issues/26)--2025-12-24
