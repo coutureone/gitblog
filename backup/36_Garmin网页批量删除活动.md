@@ -126,6 +126,6 @@ window.confirm = function() { return true; }; // 自动确认删除
 
 
 `````js
-connectActivities("delete", { before: "2026-01-29" }); // 2026年之前的数据
+connectActivities("delete", { before: "2026-01-29" }); // 示例 2026年1月29日年之前的数据
 `````
 
