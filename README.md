@@ -12,11 +12,13 @@
 - RSS：[RSS Feed](https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml)
 
 ## 最近更新
+- [Hermes 踩坑](https://github.com/coutureone/gitblog/issues/40)--2026-05-28
 - [深夜流水账：长跑、网络折腾与AI时代的胡思乱想写点东西](https://github.com/coutureone/gitblog/issues/39)--2026-05-18
 - [跑步首次“站台”](https://github.com/coutureone/gitblog/issues/38)--2026-05-07
 - [南京](https://github.com/coutureone/gitblog/issues/37)--2026-05-05
 - [Garmin网页批量删除活动](https://github.com/coutureone/gitblog/issues/36)--2026-03-31
-- [OpenClash+Mosdns+AdGuard+Atrust网络全打通](https://github.com/coutureone/gitblog/issues/35)--2026-03-08
+## Agent
+- [Hermes 踩坑](https://github.com/coutureone/gitblog/issues/40)--2026-05-28
 ## About Me
 - [关于我](https://github.com/coutureone/gitblog/issues/6)--2025-01-09
 - [OpenClash+Mosdns+AdGuard+Atrust网络全打通](https://github.com/coutureone/gitblog/issues/35)--2026-03-08
