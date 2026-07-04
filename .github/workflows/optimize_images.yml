@@ -1,0 +1,44 @@
+name: Optimize Blog Images
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - "img/**"
+      - "scripts/optimize_images.py"
+      - ".github/workflows/optimize_images.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  optimize:
+    name: Optimize images
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-actions[bot]'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pillow
+
+      - name: Optimize images
+        run: python scripts/optimize_images.py
+
+      - name: Commit optimized images
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add img
+          git commit -m "optimize blog images" || echo "nothing to commit"
+          git push
