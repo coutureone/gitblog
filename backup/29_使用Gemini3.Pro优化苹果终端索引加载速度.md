@@ -5,7 +5,7 @@
 
 &ensp;提出需求：
 
-![](https://cdn.jsdelivr.net/gh/coutureone/gitblog@main/img/image-20260110142458293.png)
+![](https://cdn.jsdelivr.net/gh/coutureone/gitblog@master/img/image-20260110142458293.png)
 
 &ensp;我的三个配置文件分别如下：
 

@@ -3,13 +3,15 @@ import argparse
 import os
 import re
 
-import markdown
 from feedgen.feed import FeedGenerator
 from github import Github
 from lxml.etree import CDATA
 from marko.ext.gfm import gfm as marko
 
-MD_HEAD = """**<p align="center">[Couture's Blog](https://blog.coutureone.top)</p>**
+BLOG_URL = os.getenv("BLOG_URL", "https://blog.xcouture.cc").rstrip("/")
+DEFAULT_BRANCH = os.getenv("DEFAULT_BRANCH", "master")
+
+MD_HEAD = """**<p align="center">[Couture's Blog]({blog_url})</p>**
 ====
 
 **<p align="center">用于记录一些琐碎</p>**
@@ -19,8 +21,8 @@ MD_HEAD = """**<p align="center">[Couture's Blog](https://blog.coutureone.top)</
 - Twitter：[@coutureone](https://twitter.com/coutureone)
 - Telegram：[@coutureone](https://t.me/coutureone)
 - Email：[couturecome@gmail.com](mailto:couturecome@gmail.@163.com)
-- Blog：[https://blog.coutures.top](https://blog.coutures.top)
-- RSS：[RSS Feed](https://raw.githubusercontent.com/{repo_name}/master/feed.xml)
+- Blog：[{blog_url}]({blog_url})
+- RSS：[RSS Feed](https://raw.githubusercontent.com/{repo_name}/{branch}/feed.xml)
 """
 
 BACKUP_DIR = "backup"
@@ -141,7 +143,11 @@ def add_md_recent(repo, md, me, limit=5):
 
 def add_md_header(md, repo_name):
     with open(md, "w", encoding="utf-8") as md:
-        md.write(MD_HEAD.format(repo_name=repo_name))
+        md.write(MD_HEAD.format(
+            blog_url=BLOG_URL,
+            branch=DEFAULT_BRANCH,
+            repo_name=repo_name,
+        ))
         md.write("\n")
 
 
@@ -200,29 +206,41 @@ def get_to_generate_issues(repo, dir_name, issue_number=None):
     return to_generate_issues
 
 
+def get_blog_issue_url(issue):
+    return f"{BLOG_URL}/#/posts/{issue.number}"
+
+
+def normalize_content_links(body, repo):
+    return body.replace(
+        f"https://cdn.jsdelivr.net/gh/{repo.full_name}@main/",
+        f"https://cdn.jsdelivr.net/gh/{repo.full_name}@{DEFAULT_BRANCH}/",
+    )
+
+
 def generate_rss_feed(repo, filename, me):
     generator = FeedGenerator()
-    generator.id(repo.html_url)
-    generator.title(f"RSS feed of {repo.owner.login}'s {repo.name}")
+    generator.id(BLOG_URL)
+    generator.title("Couture's Blog")
     generator.author(
         {"name": os.getenv("GITHUB_NAME"), "email": os.getenv("GITHUB_EMAIL")}
     )
-    generator.link(href=repo.html_url)
+    generator.link(href=BLOG_URL)
     generator.link(
-        href=f"https://raw.githubusercontent.com/{repo.full_name}/master/{filename}",
+        href=f"https://raw.githubusercontent.com/{repo.full_name}/{DEFAULT_BRANCH}/{filename}",
         rel="self",
     )
     for issue in repo.get_issues():
         if not issue.body or not is_me(issue, me) or issue.pull_request:
             continue
         item = generator.add_entry(order="append")
-        item.id(issue.html_url)
-        item.link(href=issue.html_url)
+        item.id(get_blog_issue_url(issue))
+        item.link(href=get_blog_issue_url(issue))
         item.title(issue.title)
         item.published(issue.created_at.strftime("%Y-%m-%dT%H:%M:%SZ"))
         for label in issue.labels:
             item.category({"term": label.name})
-        body = "".join(c for c in issue.body if _valid_xml_char_ordinal(c))
+        body = normalize_content_links(issue.body, repo)
+        body = "".join(c for c in body if _valid_xml_char_ordinal(c))
         item.content(CDATA(marko.convert(body)), type="html")
     generator.atom_file(filename)
 
@@ -241,21 +259,34 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
 
     # save md files to backup folder
     for issue in to_generate_issues:
-        save_issue(issue, me, dir_name)
+        save_issue(issue, me, repo, dir_name)
 
 
-def save_issue(issue, me, dir_name=BACKUP_DIR):
+def safe_backup_title(title):
+    title = title.replace("/", "-").replace(" ", ".")
+    return re.sub(r'[\\:*?"<>|\r\n]+', "-", title).strip(".-") or "untitled"
+
+
+def remove_old_backup(issue, dir_name):
+    prefix = f"{issue.number}_"
+    for file_name in os.listdir(dir_name):
+        if file_name.startswith(prefix) and file_name.endswith(".md"):
+            os.remove(os.path.join(dir_name, file_name))
+
+
+def save_issue(issue, me, repo, dir_name=BACKUP_DIR):
+    remove_old_backup(issue, dir_name)
     md_name = os.path.join(
-        dir_name, f"{issue.number}_{issue.title.replace('/', '-').replace(' ', '.')}.md"
+        dir_name, f"{issue.number}_{safe_backup_title(issue.title)}.md"
     )
-    with open(md_name, "w") as f:
+    with open(md_name, "w", encoding="utf-8") as f:
         f.write(f"# [{issue.title}]({issue.html_url})\n\n")
-        f.write(issue.body or "")
+        f.write(normalize_content_links(issue.body or "", repo))
         if issue.comments:
             for c in issue.get_comments():
                 if is_me(c, me):
                     f.write("\n\n---\n\n")
-                    f.write(c.body or "")
+                    f.write(normalize_content_links(c.body or "", repo))
 
 
 if __name__ == "__main__":

@@ -9,15 +9,15 @@
 
 运行模式肯定是tun模式，我个人也比较推荐这个模式
 
-![](https://cdn.jsdelivr.net/gh/coutureone/gitblog@main/img/image-20260308144907897.png)
+![](https://cdn.jsdelivr.net/gh/coutureone/gitblog@master/img/image-20260308144907897.png)
 
 &ensp;本地DNS劫持选择禁用
 
-![](https://cdn.jsdelivr.net/gh/coutureone/gitblog@main/img/image-20260308145009618.png)
+![](https://cdn.jsdelivr.net/gh/coutureone/gitblog@master/img/image-20260308145009618.png)
 
 &ensp;覆写设置里面就是自定义dns上游服务器勾选上，Nameserve和Fallback都是 127.0.0.1 端口号是你的mosdns端口号，我是默认5335，取决于你自己的设置。
 
-![](https://cdn.jsdelivr.net/gh/coutureone/gitblog@main/img/image-20260308145625537.png)
+![](https://cdn.jsdelivr.net/gh/coutureone/gitblog@master/img/image-20260308145625537.png)
 
 &ensp;OpenClash的设置到这里基本差不多，订阅自行导入，这里不做过多赘述。
 
@@ -203,11 +203,11 @@ plugins:
 
 &ensp;设置具体如下：
 
-![](https://cdn.jsdelivr.net/gh/coutureone/gitblog@main/img/image-20260308150339538.png)
+![](https://cdn.jsdelivr.net/gh/coutureone/gitblog@master/img/image-20260308150339538.png)
 
 
 
-![](https://cdn.jsdelivr.net/gh/coutureone/gitblog@main/img/image-20260308150400040.png)
+![](https://cdn.jsdelivr.net/gh/coutureone/gitblog@master/img/image-20260308150400040.png)
 
 根据自己实际需求进行填写，我这也只是参考作用，给自己做一个备份。
 
@@ -215,21 +215,21 @@ plugins:
 
 &ensp;主要是防止自己的端口冲突，这里可以自己设置，我是这样设置的，最主要的设置在内部的 DNS设置里面，不能写错了，下面是我的作为参考。
 
-![](https://cdn.jsdelivr.net/gh/coutureone/gitblog@main/img/image-20260308150728839.png)
+![](https://cdn.jsdelivr.net/gh/coutureone/gitblog@master/img/image-20260308150728839.png)
 
 &ensp;DNS设置
 
-![](https://cdn.jsdelivr.net/gh/coutureone/gitblog@main/img/image-20260308150910859.png)
+![](https://cdn.jsdelivr.net/gh/coutureone/gitblog@master/img/image-20260308150910859.png)
 
 &ensp;到这里其实设置的基本差不多了，还有一个最主要的没有设置，那就是网络里面的DCHP/DNS
 
 ### DHCP/DNS
 
-![](https://cdn.jsdelivr.net/gh/coutureone/gitblog@main/img/image-20260308151225689.png)
+![](https://cdn.jsdelivr.net/gh/coutureone/gitblog@master/img/image-20260308151225689.png)
 
 &ensp;转发端口是AdGuard监听端口
 
-![](https://cdn.jsdelivr.net/gh/coutureone/gitblog@main/img/image-20260308151451931.png)
+![](https://cdn.jsdelivr.net/gh/coutureone/gitblog@master/img/image-20260308151451931.png)
 
 &ensp;到这里基本就没啥问题了，ATrust其实我就不多介绍了，按照自己的实际需求来，参考GitHub项目[[docker-easyconnect](https://github.com/docker-easyconnect/docker-easyconnect)](https://github.com/docker-easyconnect/docker-easyconnect)，这个就可以了。
 
