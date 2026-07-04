@@ -18,8 +18,8 @@ MD_HEAD = """**<p align="center">[Couture's Blog]({blog_url})</p>**
 
 
 ## 联系方式
-- Twitter：[@coutureone](https://twitter.com/coutureone)
-- Telegram：[@coutureone](https://t.me/coutureone)
+- X：[@xcouturec](https://x.com/xcouturec)
+- Telegram：[@couturecc](https://t.me/couturecc)
 - Email：[couturecome@gmail.com](mailto:couturecome@gmail.@163.com)
 - Blog：[{blog_url}]({blog_url})
 - RSS：[RSS Feed](https://raw.githubusercontent.com/{repo_name}/{branch}/feed.xml)

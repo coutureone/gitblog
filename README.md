@@ -5,8 +5,8 @@
 
 
 ## 联系方式
-- Twitter：[@coutureone](https://x.com/xcouturec)
-- Telegram：[@coutureone](https://t.me/couturecc)
+- X：[@xcouturec](https://x.com/xcouturec)
+- Telegram：[@couturecc](https://t.me/couturecc)
 - Email：[couturecome@gmail.com](mailto:couturecome@gmail.@163.com)
 - Blog：[https://blog.xcouture.cc](https://blog.xcouture.cc)
 - RSS：[RSS Feed](https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml)
@@ -65,4 +65,3 @@
 - [Running](https://github.com/coutureone/gitblog/issues/11)--2025-05-08
 - [喝大学室友的喜酒](https://github.com/coutureone/gitblog/issues/10)--2025-02-12
 </details>
-
