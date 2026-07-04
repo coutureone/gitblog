@@ -14,9 +14,9 @@
 ## 最近更新
 - [友链](https://github.com/coutureone/gitblog/issues/44)--2026-07-04
 - [测试流程图](https://github.com/coutureone/gitblog/issues/43)--2026-07-04
-- [测试博客](https://github.com/coutureone/gitblog/issues/42)--2026-07-04
 - [Hermes 踩坑](https://github.com/coutureone/gitblog/issues/40)--2026-05-28
 - [深夜流水账：长跑、网络折腾与AI时代的胡思乱想写点东西](https://github.com/coutureone/gitblog/issues/39)--2026-05-18
+- [跑步首次“站台”](https://github.com/coutureone/gitblog/issues/38)--2026-05-07
 ## Agent
 - [Hermes 踩坑](https://github.com/coutureone/gitblog/issues/40)--2026-05-28
 ## About Me
@@ -65,3 +65,4 @@
 - [Running](https://github.com/coutureone/gitblog/issues/11)--2025-05-08
 - [喝大学室友的喜酒](https://github.com/coutureone/gitblog/issues/10)--2025-02-12
 </details>
+
