@@ -12,7 +12,7 @@
 - RSS：[RSS Feed](https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml)
 
 ## 最近更新
-- [测试](https://github.com/coutureone/gitblog/issues/41)--2026-07-04
+- [测试博客](https://github.com/coutureone/gitblog/issues/42)--2026-07-04
 - [Hermes 踩坑](https://github.com/coutureone/gitblog/issues/40)--2026-05-28
 - [深夜流水账：长跑、网络折腾与AI时代的胡思乱想写点东西](https://github.com/coutureone/gitblog/issues/39)--2026-05-18
 - [跑步首次“站台”](https://github.com/coutureone/gitblog/issues/38)--2026-05-07
