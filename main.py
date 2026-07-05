@@ -66,6 +66,10 @@ def is_hearted_by_me(comment, me):
     return False
 
 
+def is_friend_comment_approved(comment, me):
+    return comment.user.login == me or is_hearted_by_me(comment, me)
+
+
 def escape_table_cell(value):
     return str(value or "").replace("\n", " ").replace("|", "\\|").strip()
 
@@ -127,7 +131,7 @@ def collect_friend_links(repo, me):
     friend_issues = get_friends_issues(repo)
     for issue in friend_issues:
         for comment in issue.get_comments():
-            if not is_hearted_by_me(comment, me):
+            if not is_friend_comment_approved(comment, me):
                 continue
             friend = parse_friend_comment(comment.body or "")
             if not friend:
