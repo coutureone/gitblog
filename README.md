@@ -32,11 +32,11 @@
 </details>
 
 ## 最近更新
+- [博客优化](https://github.com/coutureone/gitblog/issues/45)--2026-07-05
 - [友链](https://github.com/coutureone/gitblog/issues/44)--2026-07-04
 - [测试流程图](https://github.com/coutureone/gitblog/issues/43)--2026-07-04
 - [Hermes 踩坑](https://github.com/coutureone/gitblog/issues/40)--2026-05-28
 - [深夜流水账：长跑、网络折腾与AI时代的胡思乱想写点东西](https://github.com/coutureone/gitblog/issues/39)--2026-05-18
-- [跑步首次“站台”](https://github.com/coutureone/gitblog/issues/38)--2026-05-07
 ## Agent
 - [Hermes 踩坑](https://github.com/coutureone/gitblog/issues/40)--2026-05-28
 ## About Me
@@ -57,7 +57,7 @@
 - [一不留神的网络环路](https://github.com/coutureone/gitblog/issues/7)--2025-01-14
 </details>
 
-## 总结
+- [博客优化](https://github.com/coutureone/gitblog/issues/45)--2026-07-05
 - [2024从那里写呢](https://github.com/coutureone/gitblog/issues/8)--2025-01-19
 - [深夜流水账：长跑、网络折腾与AI时代的胡思乱想写点东西](https://github.com/coutureone/gitblog/issues/39)--2026-05-18
 - [跑步首次“站台”](https://github.com/coutureone/gitblog/issues/38)--2026-05-07
