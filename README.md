@@ -27,6 +27,11 @@
 <td><a href="https://blog.yihong0618.me/" target="_blank" rel="noopener noreferrer">https://blog.yihong0618.me/</a></td>
 <td>yihong的记录</td>
 </tr>
+<tr>
+<td><a href="https://mrasong.com/" target="_blank" rel="noopener noreferrer">mrasong</a></td>
+<td><a href="https://mrasong.com/" target="_blank" rel="noopener noreferrer">https://mrasong.com/</a></td>
+<td>麻叔的tips</td>
+</tr>
 </tbody>
 </table>
 </details>
