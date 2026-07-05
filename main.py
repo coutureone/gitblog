@@ -2,6 +2,7 @@
 import argparse
 import os
 import re
+from html import escape as html_escape
 
 import markdown
 from feedgen.feed import FeedGenerator
@@ -71,7 +72,20 @@ def is_friend_comment_approved(comment, me):
 
 
 def escape_table_cell(value):
-    return str(value or "").replace("\n", " ").replace("|", "\\|").strip()
+    return (
+        html_escape(str(value or ""), quote=False)
+        .replace("\n", " ")
+        .replace("|", "\\|")
+        .strip()
+    )
+
+
+def make_friend_link(label, url):
+    safe_url = html_escape(str(url or ""), quote=True)
+    return (
+        f'<a href="{safe_url}" target="_blank" rel="noopener noreferrer">'
+        f"{escape_table_cell(label)}</a>"
+    )
 
 
 def parse_friend_comment(body):
@@ -97,8 +111,8 @@ def parse_friend_comment(body):
 
 def make_friend_table_row(friend):
     return FRIENDS_TABLE_TEMPLATE.format(
-        name=escape_table_cell(friend["name"]),
-        link=escape_table_cell(friend["link"]),
+        name=make_friend_link(friend["name"], friend["link"]),
+        link=make_friend_link(friend["link"], friend["link"]),
         desc=escape_table_cell(friend["desc"]),
     )
 
