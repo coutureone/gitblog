@@ -370,6 +370,16 @@ def get_to_generate_issues(repo, dir_name, issue_number=None):
     return to_generate_issues
 
 
+def ensure_issues_to_generate(repo, issues, issue_numbers):
+    issues_by_number = {int(issue.number): issue for issue in issues}
+    for issue_number in issue_numbers:
+        try:
+            issues_by_number[int(issue_number)] = repo.get_issue(int(issue_number))
+        except Exception as e:
+            print(f"Cannot refresh issue #{issue_number}: {e}")
+    return list(issues_by_number.values())
+
+
 def get_blog_issue_url(issue):
     return f"{BLOG_URL}/#/posts/{issue.number}"
 
@@ -425,6 +435,9 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
 
     generate_rss_feed(repo, "feed.xml", me)
     to_generate_issues = get_to_generate_issues(repo, dir_name, issue_number)
+    to_generate_issues = ensure_issues_to_generate(
+        repo, to_generate_issues, [issue.number for issue in friend_issues]
+    )
 
     # save md files to backup folder
     for issue in to_generate_issues:
