@@ -3,6 +3,7 @@ import argparse
 import os
 import re
 
+import markdown
 from feedgen.feed import FeedGenerator
 from github import Github
 from lxml.etree import CDATA
@@ -29,7 +30,25 @@ BACKUP_DIR = "backup"
 ANCHOR_NUMBER = 5
 TOP_ISSUES_LABELS = ["Top"]
 TODO_ISSUES_LABELS = ["TODO"]
-IGNORE_LABELS = TOP_ISSUES_LABELS + TODO_ISSUES_LABELS
+FRIENDS_LABELS = ["友链", "Friends"]
+FRIENDS_ISSUE_NUMBER = os.getenv("FRIENDS_ISSUE_NUMBER", "44")
+IGNORE_LABELS = TOP_ISSUES_LABELS + TODO_ISSUES_LABELS + FRIENDS_LABELS
+
+FRIENDS_TABLE_HEAD = "| 名字 | 链接 | 描述 |\n| --- | --- | --- |\n"
+FRIENDS_TABLE_TEMPLATE = "| {name} | {link} | {desc} |\n"
+FRIENDS_INFO_KEYS = {
+    "名字": "name",
+    "链接": "link",
+    "描述": "desc",
+}
+FRIENDS_SECTION_START = "<!-- friends:start -->"
+FRIENDS_SECTION_END = "<!-- friends:end -->"
+FRIENDS_COMMENT_FORMAT = """如果你想交换友链，请按下面格式评论；我点 ❤️ 后会自动收录。
+
+名字：你的博客名
+链接：https://example.com
+描述：一句话介绍你的博客
+"""
 
 
 def get_me(user):
@@ -38,6 +57,137 @@ def get_me(user):
 
 def is_me(issue, me):
     return issue.user.login == me
+
+
+def is_hearted_by_me(comment, me):
+    for reaction in comment.get_reactions():
+        if reaction.content == "heart" and reaction.user.login == me:
+            return True
+    return False
+
+
+def escape_table_cell(value):
+    return str(value or "").replace("\n", " ").replace("|", "\\|").strip()
+
+
+def parse_friend_comment(body):
+    info = {"name": "", "link": "", "desc": ""}
+    for line in (body or "").splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        parts = re.split(r"[:：]", line, maxsplit=1)
+        if len(parts) != 2:
+            continue
+        key = parts[0].strip()
+        value = parts[1].strip()
+        if key in FRIENDS_INFO_KEYS:
+            info[FRIENDS_INFO_KEYS[key]] = value
+
+    if not info["name"] or not info["link"]:
+        return None
+    if not re.match(r"^https?://", info["link"]):
+        return None
+    return info
+
+
+def make_friend_table_row(friend):
+    return FRIENDS_TABLE_TEMPLATE.format(
+        name=escape_table_cell(friend["name"]),
+        link=escape_table_cell(friend["link"]),
+        desc=escape_table_cell(friend["desc"]),
+    )
+
+
+def get_friends_issues(repo):
+    issues = []
+    seen = set()
+
+    if FRIENDS_ISSUE_NUMBER:
+        try:
+            issue = repo.get_issue(int(FRIENDS_ISSUE_NUMBER))
+            issues.append(issue)
+            seen.add(issue.number)
+        except Exception as e:
+            print(f"Cannot load friends issue #{FRIENDS_ISSUE_NUMBER}: {e}")
+
+    for label in FRIENDS_LABELS:
+        try:
+            for issue in repo.get_issues(labels=(label,)):
+                if issue.number not in seen:
+                    issues.append(issue)
+                    seen.add(issue.number)
+        except Exception as e:
+            print(f"Cannot load friends issues by label {label}: {e}")
+    return issues
+
+
+def collect_friend_links(repo, me):
+    friend_rows = []
+    friend_issues = get_friends_issues(repo)
+    for issue in friend_issues:
+        for comment in issue.get_comments():
+            if not is_hearted_by_me(comment, me):
+                continue
+            friend = parse_friend_comment(comment.body or "")
+            if not friend:
+                continue
+            friend_rows.append(make_friend_table_row(friend))
+    return friend_issues, friend_rows
+
+
+def render_friends_table(friend_rows):
+    if not friend_rows:
+        return "<p>暂无已审核友链。</p>"
+    table_md = FRIENDS_TABLE_HEAD + "".join(friend_rows)
+    return markdown.markdown(table_md, output_format="html", extensions=["extra"])
+
+
+def is_legacy_friend_format(body):
+    return all(key in body for key in ("name:", "url:", "desc:"))
+
+
+def build_friends_issue_body(issue, friends_html):
+    body = (issue.body or "").strip()
+    if FRIENDS_SECTION_START in body and FRIENDS_SECTION_END in body:
+        before, rest = body.split(FRIENDS_SECTION_START, 1)
+        _, after = rest.split(FRIENDS_SECTION_END, 1)
+        return (
+            before.rstrip()
+            + "\n\n"
+            + FRIENDS_SECTION_START
+            + "\n"
+            + friends_html
+            + "\n"
+            + FRIENDS_SECTION_END
+            + after
+        )
+
+    intro = (
+        FRIENDS_COMMENT_FORMAT
+        if not body or is_legacy_friend_format(body)
+        else body
+    )
+    return (
+        intro.rstrip()
+        + "\n\n---\n\n## 已收录\n\n"
+        + FRIENDS_SECTION_START
+        + "\n"
+        + friends_html
+        + "\n"
+        + FRIENDS_SECTION_END
+        + "\n"
+    )
+
+
+def sync_friends_issue(friend_issues, friends_html):
+    if not friend_issues:
+        return
+    issue = friend_issues[0]
+    next_body = build_friends_issue_body(issue, friends_html)
+    if (issue.body or "").strip() == next_body.strip():
+        return
+    issue.edit(body=next_body)
 
 
 # help to covert xml vaild string
@@ -123,6 +273,20 @@ def add_md_top(repo, md, me):
         for issue in top_issues:
             if is_me(issue, me):
                 add_issue_info(issue, md)
+
+
+def add_md_friends(md, me, friend_issues, friend_rows):
+    if not friend_issues:
+        return
+    friends_issue_number = friend_issues[0].number
+    friends_html = render_friends_table(friend_rows)
+    with open(md, "a+", encoding="utf-8") as md:
+        md.write(
+            f"## [友情链接](https://github.com/{me}/gitblog/issues/{friends_issue_number})\n"
+        )
+        md.write("<details><summary>显示</summary>\n")
+        md.write(friends_html)
+        md.write("\n</details>\n\n")
 
 
 def add_md_recent(repo, md, me, limit=5):
@@ -249,8 +413,13 @@ def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):
     user = login(token)
     me = get_me(user)
     repo = get_repo(user, repo_name)
+    friend_issues, friend_rows = collect_friend_links(repo, me)
+    friends_html = render_friends_table(friend_rows)
+    sync_friends_issue(friend_issues, friends_html)
+
     # add to readme one by one, change order here
     add_md_header("README.md", repo_name)
+    add_md_friends("README.md", me, friend_issues, friend_rows)
     for func in [add_md_top, add_md_recent, add_md_label, add_md_todo]:
         func(repo, "README.md", me)
 

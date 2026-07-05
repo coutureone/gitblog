@@ -2,10 +2,12 @@ name: Generate GitBlog README
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
   issues:
-    types: [opened, edited]
+    types: [opened, edited, labeled, unlabeled]
   issue_comment:
-    types: [created, edited]
+    types: [created, edited, deleted]
   push:
     branches:
       - master
