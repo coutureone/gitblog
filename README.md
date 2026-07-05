@@ -13,7 +13,22 @@
 
 ## [友情链接](https://github.com/coutureone/gitblog/issues/44)
 <details><summary>显示</summary>
-<p>暂无已审核友链。</p>
+<table>
+<thead>
+<tr>
+<th>名字</th>
+<th>链接</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>yihong0618</td>
+<td>https://blog.yihong0618.me/</td>
+<td>yihong的记录</td>
+</tr>
+</tbody>
+</table>
 </details>
 
 ## 最近更新
