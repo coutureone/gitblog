@@ -11,6 +11,11 @@
 - Blog：[https://blog.xcouture.cc](https://blog.xcouture.cc)
 - RSS：[RSS Feed](https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml)
 
+## [友情链接](https://github.com/coutureone/gitblog/issues/44)
+<details><summary>显示</summary>
+<p>暂无已审核友链。</p>
+</details>
+
 ## 最近更新
 - [友链](https://github.com/coutureone/gitblog/issues/44)--2026-07-04
 - [测试流程图](https://github.com/coutureone/gitblog/issues/43)--2026-07-04
@@ -37,8 +42,6 @@
 - [一不留神的网络环路](https://github.com/coutureone/gitblog/issues/7)--2025-01-14
 </details>
 
-## 友链
-- [友链](https://github.com/coutureone/gitblog/issues/44)--2026-07-04
 ## 总结
 - [2024从那里写呢](https://github.com/coutureone/gitblog/issues/8)--2025-01-19
 - [深夜流水账：长跑、网络折腾与AI时代的胡思乱想写点东西](https://github.com/coutureone/gitblog/issues/39)--2026-05-18
