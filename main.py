@@ -421,19 +421,27 @@ def generate_rss_feed(repo, filename, me):
         href=f"https://raw.githubusercontent.com/{repo.full_name}/{DEFAULT_BRANCH}/{filename}",
         rel="self",
     )
+    latest_updated_at = None
     for issue in repo.get_issues():
         if not issue.body or not is_me(issue, me) or issue.pull_request:
             continue
+        latest_updated_at = max(
+            latest_updated_at or issue.updated_at,
+            issue.updated_at,
+        )
         item = generator.add_entry(order="append")
         item.id(get_blog_issue_url(issue))
         item.link(href=get_blog_issue_url(issue))
         item.title(issue.title)
         item.published(issue.created_at.strftime("%Y-%m-%dT%H:%M:%SZ"))
+        item.updated(issue.updated_at.strftime("%Y-%m-%dT%H:%M:%SZ"))
         for label in issue.labels:
             item.category({"term": label.name})
         body = normalize_content_links(issue.body, repo)
         body = "".join(c for c in body if _valid_xml_char_ordinal(c))
         item.content(CDATA(marko.convert(body)), type="html")
+    if latest_updated_at:
+        generator.updated(latest_updated_at.strftime("%Y-%m-%dT%H:%M:%SZ"))
     generator.atom_file(filename)
 
 
