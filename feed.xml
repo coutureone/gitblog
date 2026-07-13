@@ -1,5 +1,80 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://blog.xcouture.cc</id><title>Couture's Blog</title><updated>2026-07-07T02:26:07+00:00</updated><link href="https://blog.xcouture.cc"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://blog.xcouture.cc/#/posts/46</id><title>万象输入方案配置</title><updated>2026-07-07T02:26:07+00:00</updated><content type="html"><![CDATA[<h3>1.配置文件</h3>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://blog.xcouture.cc</id><title>Couture's Blog</title><updated>2026-07-13T13:04:38+00:00</updated><link href="https://blog.xcouture.cc"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://blog.xcouture.cc/#/posts/47</id><title>关于MosDNS没有轮转机制解决方案</title><updated>2026-07-13T13:04:38+00:00</updated><content type="html"><![CDATA[<blockquote>
+<p>最近在折腾网络过程中，因为采用了<code>mosdns</code>进行分流，但是发现突然发现终端设备突然获取不到<code>IP</code>地址了，排查了好几天，才发现<code>MosDNS</code>没有轮转机,导致我软路由的内存直接溢出，然后借用<code>codex</code>写了一个删除日志的机制，摆脱内存溢出的问题。</p>
+</blockquote>
+<p>当前安装的日志保护脚本位于：</p>
+<pre><code class="language-bash">/usr/sbin/mosdns-log-guard
+</code></pre>
+<p>内容如下：</p>
+<pre><code class="language-shell">#!/bin/sh
+
+LOG_FILE=&quot;${LOG_FILE:-/var/log/mosdns.log}&quot;
+MAX_SIZE=&quot;${MAX_SIZE:-5242880}&quot;
+INTERVAL=&quot;${INTERVAL:-30}&quot;
+
+check_log() {
+	[ -f &quot;$LOG_FILE&quot; ] || return 0
+
+	SIZE=&quot;$(wc -c &lt; &quot;$LOG_FILE&quot; 2&gt;/dev/null)&quot;
+	case &quot;$SIZE&quot; in
+		&#x27;&#x27;|*[!0-9]*) return 0 ;;
+	esac
+
+	if [ &quot;$SIZE&quot; -gt &quot;$MAX_SIZE&quot; ]; then
+		logger -t mosdns-log-guard \
+			&quot;mosdns log reached ${SIZE} bytes; truncating at limit ${MAX_SIZE}&quot;
+		: &gt; &quot;$LOG_FILE&quot;
+	fi
+}
+
+if [ &quot;$1&quot; = &quot;--once&quot; ]; then
+	check_log
+	exit 0
+fi
+
+while true; do
+	check_log
+	sleep &quot;$INTERVAL&quot;
+done
+</code></pre>
+<p>参数含义：</p>
+<pre><code>日志文件：/var/log/mosdns.log
+日志上限：5242880字节，即5 MiB
+检查间隔：30秒
+</code></pre>
+<p>对应的开机服务位于：</p>
+<pre><code>/etc/init.d/mosdns-log-guard
+</code></pre>
+<p>内容如下：</p>
+<pre><code class="language-bash">#!/bin/sh /etc/rc.common
+
+START=76
+STOP=10
+USE_PROCD=1
+
+PROG=/usr/sbin/mosdns-log-guard
+
+start_service() {
+	procd_open_instance
+	procd_set_param command &quot;$PROG&quot;
+	procd_set_param respawn 3600 5 5
+	procd_set_param file &quot;$PROG&quot;
+	procd_close_instance
+}
+</code></pre>
+<p>手动检查一次可以运行：</p>
+<pre><code class="language-bash">/usr/sbin/mosdns-log-guard --once
+</code></pre>
+<p>查看服务状态：</p>
+<pre><code class="language-bash">ubus call service list &#x27;{&quot;name&quot;:&quot;mosdns-log-guard&quot;}&#x27;
+</code></pre>
+<p>查看是否开机启用：</p>
+<pre><code class="language-bash">/etc/init.d/mosdns-log-guard enabled
+</code></pre>
+<p>查看保护服务产生的系统日志：</p>
+<pre><code class="language-bash">logread | grep mosdns-log-guard
+</code></pre>
+]]></content><link href="https://blog.xcouture.cc/#/posts/47"/><category term="技术"/><published>2026-07-13T13:04:38+00:00</published></entry><entry><id>https://blog.xcouture.cc/#/posts/46</id><title>万象输入方案配置</title><updated>2026-07-07T02:26:07+00:00</updated><content type="html"><![CDATA[<h3>1.配置文件</h3>
 <p>自定义配置文件新建<code>wanxiang.custom.yaml</code></p>
 <pre><code class="language-yaml"># 万象拼音个人配置
 # 用途：整理根目录 wanxiang.custom.yaml，适合 Mac 与 Hamster3 同步使用。
