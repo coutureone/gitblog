@@ -1,5 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://blog.xcouture.cc</id><title>Couture's Blog</title><updated>2026-07-13T13:04:38+00:00</updated><link href="https://blog.xcouture.cc"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://blog.xcouture.cc/#/posts/47</id><title>关于MosDNS没有轮转机制解决方案</title><updated>2026-07-13T13:04:38+00:00</updated><content type="html"><![CDATA[<blockquote>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://blog.xcouture.cc</id><title>Couture's Blog</title><updated>2026-07-16T15:05:21+00:00</updated><link href="https://blog.xcouture.cc"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://blog.xcouture.cc/#/posts/48</id><title># 奇怪的人际关系</title><updated>2026-07-16T15:05:21+00:00</updated><content type="html"><![CDATA[<blockquote>
+<p>我们是认识的人，但不是互相重视、稳定回应的朋友。有些关系靠我主动维持，有些关系则让我看清了人与人之间不同的分寸感。</p>
+</blockquote>
+<p>最近遇到了两件小事，让我重新思考所谓的“朋友关系”。</p>
+<p>第一件事，是我在朋友圈看到一个朋友发了很有意思的内容，于是在下面留了评论。几分钟过去，对方没有回复，却又继续发了一条新的朋友圈。那一刻，我产生了一种难以形容的感觉：他明明还在使用微信，却没有回应我的话。究竟是没有看到、不知道怎么回复，还是根本不想回复？虽然朋友圈评论并没有必须回复的规定，但这种无声的忽略，还是会让主动交流的人感到尴尬。</p>
+<p>我平时并不是一个喜欢发朋友圈的人，也很少为了获得关注而频繁评论别人。只有看到真正感兴趣的内容，或者觉得彼此关系不错时，我才会主动说几句话。对我来说，评论是一种友好的表达，也代表我愿意参与对方的生活。所以当这份主动长期得不到回应时，我难免会怀疑，是不是自己高估了这段关系。</p>
+<p>另一件事，则与钱有关。之前有个朋友向我借钱，后来只归还了一半，剩下的钱直到现在也没有还。奇怪的是，对方经常在朋友圈分享自己的生活，也时常晒出一些奢侈品。也许那些东西并不代表他的真实经济状况，也许背后还有我不了解的原因，但看到这些内容时，我还是会觉得不舒服。不是因为我舍不得那笔钱，而是因为一个人有能力展示体面生活，却没有主动交代欠款，多少反映了他对承诺和他人感受的态度。</p>
+<p>剩下的钱，我已经不打算再要了。不是因为这件事合理，也不是因为对方不需要偿还，而是我不想再为了这笔钱继续消耗自己的情绪。就把它当作一次看清关系的成本：借出去的是钱，收回来的是对一个人的认识。</p>
+<p>这两件事看起来不同，其实都有相似之处——人与人对关系的重视程度并不总是对等的。一个忽略了我的主动，一个忽略了自己的承诺。他们或许并没有明显的恶意，只是没有把我的感受和这段关系放在足够重要的位置。</p>
+<p>后来我渐渐明白，有些关系不必争论，也不必追问，只需要重新摆放到合适的位置。可以继续认识，可以保持基本礼貌，但不必再投入同样的信任和热情。真正值得珍惜的朋友，不一定每条评论都会回复，也未必永远不犯错，但至少会在意你的感受、尊重彼此的承诺，不会总让你怀疑自己是否打扰了对方。</p>
+<p>人与人之间最让人失望的，往往不是一次没有回复，也不只是一笔没有还清的钱，而是从这些细节中发现：原来自己珍惜的关系，在对方那里可能并没有同样的分量。</p>
+]]></content><link href="https://blog.xcouture.cc/#/posts/48"/><category term="杂记"/><published>2026-07-16T15:05:21+00:00</published></entry><entry><id>https://blog.xcouture.cc/#/posts/47</id><title>关于MosDNS没有轮转机制解决方案</title><updated>2026-07-13T13:04:38+00:00</updated><content type="html"><![CDATA[<blockquote>
 <p>最近在折腾网络过程中，因为采用了<code>mosdns</code>进行分流，但是发现突然发现终端设备突然获取不到<code>IP</code>地址了，排查了好几天，才发现<code>MosDNS</code>没有轮转机,导致我软路由的内存直接溢出，然后借用<code>codex</code>写了一个删除日志的机制，摆脱内存溢出的问题。</p>
 </blockquote>
 <p>当前安装的日志保护脚本位于：</p>
