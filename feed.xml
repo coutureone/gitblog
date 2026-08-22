@@ -1,5 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://blog.xcouture.cc</id><title>Couture's Blog</title><updated>2026-08-17T01:02:59+00:00</updated><link href="https://blog.xcouture.cc"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://blog.xcouture.cc/#/posts/50</id><title>关于苹果iMessage 打字卡顿BUG</title><updated>2026-08-17T01:02:59+00:00</updated><content type="html"><![CDATA[<p> 在黑苹果升级了26.6系统以后，iMessage非常卡，是打字都是肉眼可见的卡，然后我去网上找资料，我发现白果也是存在同样的问题，我看苹果官方给的解决方案是电脑注销换个账户，我找到的并且试验成功的解决方案就是：</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://blog.xcouture.cc</id><title>Couture's Blog</title><updated>2026-08-22T16:14:49+00:00</updated><link href="https://blog.xcouture.cc"/><link href="https://raw.githubusercontent.com/coutureone/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://blog.xcouture.cc/#/posts/51</id><title>1000KM</title><updated>2026-08-22T16:14:49+00:00</updated><content type="html"><![CDATA[<p> 今天跑完以后，我像往常一样停下手表，结束，保存，年初定下的目标1000公里，今天实现了。这也是我跑步以来，第一次一年时间跑了这么多公里的路程。我很开心。但真正让我感慨的，并不是“一千公里”本身，而是它背后那些普通得几乎不会被记住的日子。</p>
+<h2>一千公里，是许多个平凡日子的总和</h2>
+<p> 一千公里听起来很远。可真正跑起来，它从来不是一次完成的。它被拆散在一年里的许多个清晨、傍晚和夜晚，藏在一次次五公里、十公里，以及那些状态不好、只勉强跑完几公里的训练里。有些时候天气很好，脚步轻快，跑起来仿佛毫不费力；也有些时候身体疲惫，刚出门就开始怀疑自己为什么要跑。</p>
+<p> 有迎着风的时候，也有淋着雨的时候；有看过日出，也有在夜色里独自跑过熟悉的街道。现在回头看，那些当时觉得普普通通的跑步记录，最终连在了一起，变成了今天的这一千公里。原来所谓的“很远”，不过是把一段段不远的路，坚持走了下去。</p>
+<h2>并不是每一次出发，都充满动力</h2>
+<p> 跑到一千公里，靠的并不是每天都有强烈的热情。很多时候，我也不想出门。工作忙、天气不好、身体疲惫，或者只是单纯地想偷懒。真正困难的往往不是完成一场长跑，而是在这些时刻穿好鞋，对自己说：先出去跑一会儿。有时跑着跑着，状态慢慢就回来了；有时直到结束，依然觉得辛苦。但现在想来，那些状态不好的跑步同样重要。它们或许没有漂亮的配速，也没有值得炫耀的数据，却让我明白了一件事：</p>
+<p> <strong>坚持不是始终热爱，而是在热情暂时消失的时候，依然愿意继续做下去。</strong></p>
+<p> 当然，坚持也不等于勉强自己。累了就休息，疼了就停下来，学着听身体的声音，再在合适的时候重新出发。能够长期跑下去，比任何一次速度和距离都更加重要。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/coutureone/gitblog@master/img/20260823001210351.png" alt="" /></p>
+<h2>一千公里，是终点，也是途中的一块路标</h2>
+<p> 今天值得纪念，但它并不是跑步的终点。完成年度目标以后，我没有突然变成一个多么了不起的人。明天醒来，生活仍然照常继续；下一次跑步，也依然要从第一步开始。所以，我更愿意把这一千公里看作一块路标。它提醒我：我曾经认真地为一件事付出时间，也确实通过一次次微小的行动，抵达了自己设定的地方。</p>
+<p> 这一千公里不是某一个瞬间的壮举，而是过去的我送给今天的我，一份由时间和坚持共同完成的礼物。接下来，我不急着立刻为自己增加一个更大的数字。还是想好好跑步，认真感受每一次出发，健康地跑得更久一些。</p>
+<p> <strong>谨以此文，纪念自己年中跑过的第一个千公里。</strong></p>
+<p> 也谢谢那个在许多个想要放弃的时刻，最终还是选择奔向前方的自己。</p>
+]]></content><link href="https://blog.xcouture.cc/#/posts/51"/><category term="running"/><published>2026-08-22T16:14:49+00:00</published></entry><entry><id>https://blog.xcouture.cc/#/posts/50</id><title>关于苹果iMessage 打字卡顿BUG</title><updated>2026-08-17T01:02:59+00:00</updated><content type="html"><![CDATA[<p> 在黑苹果升级了26.6系统以后，iMessage非常卡，是打字都是肉眼可见的卡，然后我去网上找资料，我发现白果也是存在同样的问题，我看苹果官方给的解决方案是电脑注销换个账户，我找到的并且试验成功的解决方案就是：</p>
 <p> 给iMessage里面的苹果账户退出，然后退出iMessage，然后重新登录。</p>
 <h4>想说一句，SB厨子</h4>
 ]]></content><link href="https://blog.xcouture.cc/#/posts/50"/><category term="杂记"/><published>2026-08-17T01:02:59+00:00</published></entry><entry><id>https://blog.xcouture.cc/#/posts/49</id><title>无糖可乐比咖啡劲大</title><updated>2026-07-31T18:13:29+00:00</updated><content type="html"><![CDATA[<p> 凌晨两点，我躺在床上毫无困意。大概是因为晚上十一点喝了一瓶无糖可乐，没想到它的后劲居然比咖啡还大。深夜睡不着也没什么事情可做，索性记录一下今天和lanlan小朋友看的《蜘蛛侠4：崭新之日》。</p>

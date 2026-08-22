@@ -37,11 +37,11 @@
 </details>
 
 ## 最近更新
+- [1000KM](https://github.com/coutureone/gitblog/issues/51)--2026-08-22
 - [关于苹果iMessage 打字卡顿BUG](https://github.com/coutureone/gitblog/issues/50)--2026-08-17
 - [无糖可乐比咖啡劲大](https://github.com/coutureone/gitblog/issues/49)--2026-07-31
 - [奇怪的人际关系](https://github.com/coutureone/gitblog/issues/48)--2026-07-16
 - [关于MosDNS没有轮转机制解决方案](https://github.com/coutureone/gitblog/issues/47)--2026-07-13
-- [万象输入方案配置](https://github.com/coutureone/gitblog/issues/46)--2026-07-07
 ## Agent
 - [Hermes 踩坑](https://github.com/coutureone/gitblog/issues/40)--2026-05-28
 ## About Me
@@ -63,6 +63,8 @@
 - [一不留神的网络环路](https://github.com/coutureone/gitblog/issues/7)--2025-01-14
 </details>
 
+## running
+- [1000KM](https://github.com/coutureone/gitblog/issues/51)--2026-08-22
 - [博客优化](https://github.com/coutureone/gitblog/issues/45)--2026-07-05
 - [2024从那里写呢](https://github.com/coutureone/gitblog/issues/8)--2025-01-19
 - [关于苹果iMessage 打字卡顿BUG](https://github.com/coutureone/gitblog/issues/50)--2026-08-17
